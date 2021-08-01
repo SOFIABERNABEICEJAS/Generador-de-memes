@@ -1,0 +1,68 @@
+html, body{
+    margin: 0%;
+    height: 120vh;
+}
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(105, 61, 3);
+    color:wheat
+
+}
+.botones-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+     
+}
+.estilos-botones-header{
+    height: 35px;
+    border: solid rgb(105, 61, 3);
+    background-color:rgb(105, 61, 3);
+    color: wheat;
+    font-size: 16px;
+    margin:8px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+
+
+}
+.estilos-botones-header:active{
+    background-color:rgb(116, 67, 4) ;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color:rgb(146, 89, 15);
+}
+
+.contenedor-central{
+    margin-top: 15px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.texto-superior-inferior{
+    width: 450px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.espacio-de-meme{
+    width: 450px;
+    height: 300px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+    
+}
