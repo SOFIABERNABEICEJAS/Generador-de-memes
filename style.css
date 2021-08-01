@@ -8,18 +8,21 @@ header{
     align-items: center;
     justify-content: center;
     background-color:rgb(105, 61, 3);
-    color:wheat
+    color:wheat;
+    width: 100%;
 
-}
+ }
+
+
 .botones-header{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+   
      
 }
 .estilos-botones-header{
-    height: 35px;
+    height: 30px;
     border: solid rgb(105, 61, 3);
     background-color:rgb(105, 61, 3);
     color: wheat;
@@ -31,6 +34,9 @@ header{
 }
 .estilos-botones-header:active{
     background-color:rgb(116, 67, 4) ;
+}
+.estilos-botones-header:hover{
+    color:white;
 }
 main{
     display: flex;
@@ -48,7 +54,7 @@ main{
     justify-content: center;
 }
 .texto-superior-inferior{
-    width: 450px;
+    width: 400px;
     height: 60px;
     background-color: white;
     display: flex;
@@ -56,13 +62,22 @@ main{
     justify-content: center;
 }
 .espacio-de-meme{
-    width: 450px;
-    height: 300px;
+    width: 400px;
+    height: 250px;
     background-color: black;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-    
+.formulario-texto-derecha{
+   
+    height: 120vh;
+    width: 300px;
+  
 }
+form{
+    display: flex;
+   flex-direction: column;
+}
+    

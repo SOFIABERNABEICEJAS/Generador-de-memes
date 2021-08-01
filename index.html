@@ -5,21 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
     <title>Editor de memes</title>
 </head>
 <body>
+     
     <header>
         <h1> GENERADOR DE MEMES</h1>
         <div class="botones-header">
-            <button class="estilos-botones-header">Imagen</button>
-            <button class="estilos-botones-header">Texto</button>
-            <button class="estilos-botones-header">Modo Oscuro</button>
-            <button class="estilos-botones-header">Modo Claro</button>
+            <button class="estilos-botones-header"><i class="fa fa-photo"></i> Imagen</button>
+            <button class="estilos-botones-header"><i class="fa fa-font"></i> Texto</button>
+            <button class="estilos-botones-header"><i class="fa fa-moon-o"></i> Modo Oscuro</button>
+            <button class="estilos-botones-header"><i class="fa fa-sun-o"></i> Modo Claro</button>
 
         </div>
         
     </header>
     <main>
+       
         <div class="contenedor-central">
             <div class="texto-superior-inferior">
                 <h2>TOP TEXT</h2>
@@ -36,26 +41,62 @@
         <div>
             <h3>Imagen</h3>
             <form>
-                <label>URL
-                    <input type=texto ></input>
-
+                <label> URL:
+                 <input type="url" name="imagen personal"/>   
                 </label>
                 <label>
+
 
 
                 </label>
 
             </form>
         </div>
-        <div>
-            <h3>Texto</h3>
-            <form>
-                <label>
-                    <textarea></textarea>
-                </label>
-
-            </form>
-        </div>
+       
     </main>
+    <div class="formulario-texto-derecha">
+        <h3>Texto</h3>
+        <form>
+            <label> Texto superior</label>
+                <textarea name="texto superior" cols="15" rows="3">Top Text</textarea>
+            
+           
+            <label>Texto superior 
+            <input type="checkbox" name="acepto" value="acepto"/> 
+             </label> 
+            <label> Texto inferior </label>
+                <textarea name="texto inferiror" cols="15" rows="3">Top Text</textarea>
+            
+           
+            <label>Texto inferior  
+            <input type="checkbox" name="acepto" value="acepto"/> 
+            </label>
+            Fuentes <select name="opciones"> 
+                <option value="arieal">Arial</option>
+                <option value="Arial Black">Arial Black</option>
+                <option value="Americam">Americam</option>
+                <option value="Andale Mano">Andale Mano</option>
+                <option value="Comic Sans MS">Comic Sans MS</option>
+                <option value="Helvetica">Helvetica</option>
+                <option value="Impact" salected>Impact</option>
+                <option value="Verdana">Verdana</option>
+                <option value="Times New Roman">Times New Roman</option>
+
+            </select>
+            <fieldset>
+            <label>
+                <input type="number" name="tamaño de letra" min="16" max="40" aria-label="tamaño de letra">
+            </label>
+           
+         
+            
+            <button><i class="fa fa-align-left"></i></button>
+            <button><i class="fa fa-align-center"></i></button>
+            <button> <i class="fa fa-align-right"></i></button>
+
+        </fieldset>
+        </form>
+    </div>
+    
 </body>
 </html>
