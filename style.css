@@ -94,7 +94,7 @@ aside{
     flex-direction: column;
 
     }
-label{
+.label-tamaño{
         margin: 3px;
         width: 200px;
     }
@@ -103,7 +103,7 @@ form{
      flex-direction: column;
     
     }
- .estilo-fondo-color{
+ .tamaño-fondo-color{
     
      width: 100px;
      height: 30px;
@@ -114,6 +114,8 @@ form{
 .range-imagen{ 
     display: flex;
     flex-direction: column;
+    width: 200px;
+    margin:3px;
 
 }
 
@@ -155,7 +157,11 @@ textarea{
 }
 .estilo-ancho-margen{
     width: 200px;
-    margin:3px;
+    margin:3px 3px 10px 3px;
+
+}
+.tamaño-type-number{
+    width: 87px;
 
 }
 .botones-contorno{
@@ -163,4 +169,13 @@ textarea{
     height: 30px;
 }
 
- 
+ .contenedor{
+     margin: 6px;
+     display: flex;
+ }
+.cajas-color-fondo{
+    margin: 0%;
+    display: flex;
+    flex-direction: column;
+   
+}
