@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
+
 
     <title>Editor de memes</title>
 </head>
+
 <body>
-     
+
     <header>
         <h1> GENERADOR DE MEMES</h1>
         <div class="botones-header">
@@ -21,14 +23,14 @@
             <button class="estilos-botones-header"><i class="fa fa-sun-o"></i> Modo Claro</button>
 
         </div>
-        
+
     </header>
     <main>
-       
+
         <div class="contenedor-central">
             <div class="texto-superior-inferior">
                 <h2>TOP TEXT</h2>
-            
+
             </div>
             <div class="espacio-de-meme">
 
@@ -36,20 +38,22 @@
             <div class="texto-superior-inferior">
                 <h2> BOTTOM TEXT</h2>
             </div>
-            
+
         </div>
-       
-         <aside >
-         <section class="formulario-imagen-derecha">
+
+    
+    
+    <aside>
+        <section class="formulario-imagen-derecha">
             <h3>IMAGEN</h3>
             <form>
-                <label> URL:
-                 <input type="url" name="imagen personal"/>   
+                <label class="estilo-formulario"> URL:
+                    <input type="url" name="imagen personal" />
                 </label>
                 <legend>
-                    <label> FONDO  </label>
-                    <input name="color del fondo" type="color" aria-label="color del fondo">
-                    <select name="opciones"> 
+                    <label class="estilo-formulario"> FONDO </label>
+                    <input class="estilo-fondo-color"  type="color" name="color del fondo"aria-label="color del fondo">
+                    <select class="estilo-fondo-color" name="opciones">
                         <option value="" selected>Ninguno</option>
                         <option value="Aclarar">Aclarar</option>
                         <option value="Oscurecer">Oscurecer</option>
@@ -58,100 +62,141 @@
                         <option value="Multiplicar">Multiplicar</option>
                     </select>
                 </legend>
-                <legend>
-                    <label>FILTROS</label>
-                    <input type="range" min="">
-                    <input type="range" min="">
-                    <input type="range" min="">
-                    <input type="range" min="">
-                    <input type="range" min="">
-                    <input type="range" min="">
-                    <input type="range" min="">
-                    <input type="range" min="">
+                <legend class="range-imagen">
+                    <label class="range-imagen">Brillo
+                        <input type="range" min="0" max="1" value="1">
+                    </label>
+                    <label class="range-imagen">Opacidad
+                        <input type="range" min="0" max="1" value="1">
+                    </label>
+
+                    <label class="range-imagen">Contraste
+                        <input type="range" min="100" max="1000" value="100">
+                    </label>
+
+                    <label class="range-imagen">Desenfoque
+                        <input type="range" min="0" max="10" value="0">
+                    </label>
+
+                    <label class="range-imagen">Escala de grises
+                        <input type="range" min="0" max="100" value="0">
+                    </label>
+
+
+                    <label class="range-imagen">Sepia
+                        <input type="range" min="0" max="100" value="0">
+                    </label>
+
+                    <label class="range-imagen">Hue
+                        <input type="range" min="0" max="360" value="0">
+                    </label>
+                    <label class="range-imagen">Saturado
+                        <input type="range" min="100" max="1000" value="100">
+                    </label>
+                    <label class="range-imagen"> Negativo
+                        <input type="range" min="0" max="1" value="0">
+                    </label>
+
 
                 </legend>
-              
+                <button class="boton-reestablecer-filtros">RESTABLECER FILTROS</button>
 
-               
+
+
+
+
+
+
 
             </form>
 
         </section>
+
+
+
+
+
+
+
+
         <section class="formulario-texto-derecha">
             <h3>TEXTO</h3>
-        <form>
-            <label> TEXTO SUPERIOR</label>
-                <textarea name="texto superior" cols="15" rows="3">Top Text</textarea>
-            
-           
-            <label>Texto superior 
-            <input type="checkbox" name="acepto" value="acepto"/> 
-             </label> 
-            <label> Texto inferior </label>
-                <textarea name="texto inferiror" cols="15" rows="3">Top Text</textarea>
-            
-           
-            <label>TEXTO INFERIOR 
-            <input type="checkbox" name="acepto" value="acepto"/> 
-            </label>
-            FUENTES <select name="opciones"> 
-                <option value="arieal">Arial</option>
-                <option value="Arial Black">Arial Black</option>
-                <option value="Americam">Americam</option>
-                <option value="Andale Mano">Andale Mano</option>
-                <option value="Comic Sans MS">Comic Sans MS</option>
-                <option value="Helvetica">Helvetica</option>
-                <option value="Impact" salected>Impact</option>
-                <option value="Verdana">Verdana</option>
-                <option value="Times New Roman">Times New Roman</option>
-            </select>
-            <fieldset>
-            <label>
-                <input type="number" name="tamaño de letra" min="16" max="40" aria-label="tamaño de letra">
-            </label>
-            <button><i class="fa fa-align-left"></i></button>
-            <button><i class="fa fa-align-center"></i></button>
-            <button> <i class="fa fa-align-right"></i></button>
-
-        </fieldset>
-        <fieldset>
-          <label> COLOR   </label>
-          <input name="color del texto" type="color" aria-label="color del texto">
-          <label> FONDO  </label>
-            <input name="color del fondo" type="color" aria-label="color del fondo">
-
-            <label>Fondo transparente
-                <input type="checkbox" name="acepto" value="acepto"/> 
-            </label>
-
-        </fieldset>
-        <fieldset> CONTORNO
-            <button>Ninguno</button>
-            <button>Claro</button>
-            <button>Oscuro</button>
-        </fieldset>
-        <label> ESPACIADO</label>
-        <input type="number" name="espaciado" min="10" max="50" aria-label="es el espacio para escribir arriba y abajo de la foto">
-        INTERLINEADO<select name="opciones"> 
-            <option value="0.8">0.8</option>
-            <option value="1">1</option>
-            <option value="1.2">1.2</option>
-            <option value="1.5" selected>1.5</option>
-            <option value="2">2</option>
-            <option value="2.5">2.5</option>
-        </select>
-    
-    </form>
-
-        </section>
+            <form>
+                <label > TEXTO SUPERIOR</label>
+                <textarea  name="texto superior" cols="15" rows="3">Top Text</textarea>
                 
-         </aside>
 
-    
-        
-       
-    </main>
-    
-    
+
+                <label class="estilo-superior-inferior">
+                    <input type="checkbox" name="acepto" value="acepto" /> Sin texto superior
+                </label>
+
+
+                <label> TEXTO INFERIOR </label>
+                <textarea name="texto inferiror" cols="15" rows="3">Top Text</textarea>
+                <label class="estilo-superior-inferior">
+                    <input  type="checkbox" name="acepto" value="acepto" /> Sin texto inferior
+                </label>
+
+                <label>FUENTES</label> 
+                <select class="estilo-ancho-margen" name="opciones"> 
+                    <option value="arieal">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="Americam">Americam</option>
+                    <option value="Andale Mano">Andale Mano</option>
+                    <option value="Comic Sans MS">Comic Sans MS</option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact" salected>Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <fieldset>
+                    <label>
+                        <input type="number" name="tamaño de letra" min="16" max="40" aria-label="tamaño de letra">
+                    </label>
+                    <button><i class="fa fa-align-left"></i></button>
+                    <button><i class="fa fa-align-center"></i></button>
+                    <button> <i class="fa fa-align-right"></i></button>
+
+                </fieldset>
+                <fieldset>
+                    <label> COLOR </label>
+                    <input name="color del texto" type="color" aria-label="color del texto">
+                    
+                    <label> FONDO </label>
+                    <input name="color del fondo" type="color" aria-label="color del fondo">
+                    
+                </fieldset>
+                <label class="estilo-superior-inferior">
+                    <input type="checkbox" name="acepto" value="acepto" />Fondo transparente
+                </label>
+                <label>CONTORNO</label> 
+                <fieldset>
+                    
+                    <button class="botones-contorno">Ninguno</button>
+                    <button class="botones-contorno">Claro</button>
+                    <button class="botones-contorno">Oscuro</button>
+                </fieldset>
+                <label> ESPACIADO</label>
+                <input class="estilo-ancho-margen" type="number" name="espaciado" min="10" max="50"
+                    aria-label="es el espacio para escribir arriba y abajo de la foto">
+               <label>INTERLINEADO</label> 
+                <select class="estilo-ancho-margen" name="opciones">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5" selected>1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+
+            </form>
+
+
+
+    </aside>
+
+</main>
 </body>
+
 </html>

@@ -70,14 +70,97 @@ main{
     justify-content: center;
 }
 
-.formulario-texto-derecha{
+aside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 280px;
+    margin: 0%;
+    background-color:rgb(92, 54, 4);
+    color: wheat;
    
+}
+
+/* seccion formulario imagen */
+
+.formulario-imagen-derecha{
     height: 120vh;
-    width: 300px;
+    width: 250px;
+    background-color:rgb(92, 54, 4);
+    }
+.estilo-formulario{
+    display: flex;
+    flex-direction: column;
+
+    }
+label{
+        margin: 3px;
+        width: 200px;
+    }
+form{
+     display: flex;
+     flex-direction: column;
+    
+    }
+ .estilo-fondo-color{
+    
+     width: 100px;
+     height: 30px;
+     
+ }
+
+
+.range-imagen{ 
+    display: flex;
+    flex-direction: column;
+
+}
+
+.boton-reestablecer-filtros{
+    margin: 6px;
+    
+    width: 150px;
+    height: 40px;
+    color:wheat;
+    background-color:rgb(92, 54, 4);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.boton-reestablecer-filtros:hover{
+    background-color:rgb(110, 65, 5);
+    color:white;
+ 
+ }
+
+
+/* seccion formulario texto */
+
+
+.formulario-texto-derecha{
+    height: 120vh;
+    width: 250px;
+    background-color:rgb(92, 54, 4);
   
 }
-form{
-    display: flex;
-   flex-direction: column;
+textarea{
+    width: 200px;
+    margin:0px 3px;
 }
-    
+
+.estilo-superior-inferior{
+    margin-top:0px;
+    margin-bottom:10px;
+    font-size: 14px;
+}
+.estilo-ancho-margen{
+    width: 200px;
+    margin:3px;
+
+}
+.botones-contorno{
+    width: 65px;
+    height: 30px;
+}
+
+ 
