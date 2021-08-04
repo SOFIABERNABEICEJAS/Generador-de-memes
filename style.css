@@ -1,17 +1,9 @@
 html, body{
-    margin: 0%;
-    height: 120vh;
-    
+    margin: 0%; 
 }
-body{
-    display: flex;
-}
-main{
-    flex:5;
-}
-aside{
-    flex:1
-}
+
+
+
 header{
     display: flex;
     flex-direction: column;
@@ -22,14 +14,11 @@ header{
     width: 100%;
 
  }
-
-
 .botones-header{
     display: flex;
     align-items: center;
     justify-content: center;
    
-     
 }
 .estilos-botones-header{
     height: 30px;
@@ -48,7 +37,9 @@ header{
 .estilos-botones-header:hover{
     color:white;
 }
+
 main{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -80,24 +71,41 @@ main{
     justify-content: center;
 }
 
-aside{
+
+.boton-descargar-meme{
+    height: 40px;
+    border: 3px solid rgb(105, 61, 3);
+    background-color:rgb(105, 61, 3);
+    color: wheat;
+    font-size: 16px;
+    margin-top: 15px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+ }
+ .boton-descargar-meme:hover{
+    background-color:rgb(110, 65, 5);
+    color:white;
+    border: 1px solid rgb(192, 163, 125)
+    
+
+ }
+
+
+
+/* seccion formulario imagen */
+
+
+.formulario-imagen-derecha{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 280px;
-    margin: 0%;
-    background-color:rgb(92, 54, 4);
-    color: wheat;
-   
-}
-
-/* seccion formulario imagen */
-
-.formulario-imagen-derecha{
     height: 120vh;
     width: 250px;
+    position:absolute;
+    right: 0px;
+    top: 0px;
     background-color:rgb(92, 54, 4);
+    color:wheat;
     }
 .estilo-formulario{
     display: flex;
@@ -135,7 +143,6 @@ form{
     flex-direction: column;
     width: 200px;
     margin:3px;
-
 }
 
 .boton-reestablecer-filtros{
@@ -153,16 +160,40 @@ form{
  
  }
 
+ 
+ .contenedor-cerrar-abrir{
+     width: 200px;
+     display: flex;
+     justify-content:flex-start;
+  
 
+ }
+ .boton-abrir-cerrar-formulario{
+    
+    border: solid rgb(92, 54, 4); ;
+    background-color:transparent;
+    color:wheat;
+    
+    
+ }
 /* seccion formulario texto */
 
 
 .formulario-texto-derecha{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 120vh;
     width: 250px;
     background-color:rgb(92, 54, 4);
+    color:wheat;
+    position:absolute;
+    right: 0px;
+    top: 0px;  
   
 }
+
 textarea{
     width: 200px;
     margin:0px 3px;
@@ -188,3 +219,14 @@ textarea{
 }
 
 
+/* fin del formulario de texto */
+
+/* estilos js */
+
+.ocultar{
+    display: none;
+    
+}
+.mostrar{
+    display:block;
+}
