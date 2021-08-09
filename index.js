@@ -1,61 +1,75 @@
 
 let botonImagen =document.getElementById("boton-imagen")
 let seccionImagen=document.getElementById("formulario-imagen")
+let ocultar=document.querySelector(".ocultar")
+let mostrar=document.querySelector(".mostrar")
 
-let mostrarImagen =()=>{    
+botonImagen.onclick=()=>{    
 seccionImagen.style.display="flex"
 seccionTexto.style.display="none"
 
 }
-botonImagen.onclick = mostrarImagen
-
 
 let botonCerrarImagen = document.getElementById("boton-cerrar-imagen")
 
-let cerrarImagen=()=>{
+botonCerrarImagen.onclick=()=>{
  seccionImagen.style.display="none"
 
 }
-botonCerrarImagen.onclick=cerrarImagen
-
 
 let botonTexto = document.getElementById("boton-texto")
 let seccionTexto=document.getElementById("formulario-texto")
 
-let mostrarTexto=()=>{
+botonTexto.onclick=()=>{
  seccionTexto.style.display="flex"
  seccionImagen.style.display="none"
 
 }
-botonTexto.onclick = mostrarTexto
+ 
 
 let botonCerrarTexto= document.getElementById("boton-cerrar-texto")
 
-let cerrarTexto=()=>{
+botonCerrarTexto.onclick=()=>{
   seccionTexto.style.display="none"
   
 }
-botonCerrarTexto.onclick=cerrarTexto
+
 
 
 let botonModoOscuro= document.getElementById("boton-modo-oscuro")
 let botonModoClaro=document.getElementById("boton-modo-claro")
-let ocultar=document.querySelector(".ocultar")
-let mostrar=document.querySelector(".mostrar")
+let modoClaro=document.getElementById("modo-claro")
+let formularioClaro=document.getElementById("formulario-claro")
+let mainClaro=document.getElementById("main-claro")
+let botonDescargarMeme=document.getElementById("boton-descargar-meme")
 
 
 botonModoOscuro.onclick=()=>{
-  if(botonModoClaro.style.display="flex"){
+  if(botonModoClaro.style.display="block"){
     botonModoOscuro.style.display="none"
+    modoClaro.classList.remove("header-claro")
+     formularioClaro.classList.remove("seccion-claro")
+     mainClaro.classList.remove("main-claro")
+     botonImagen.classList.remove("botones-claro")
+     botonTexto.classList.remove("botones-claro")
+     botonModoOscuro.classList.remove("botones-claro")
+     botonModoClaro.classList.remove("botones-claro")
+     botonDescargarMeme.classList.remove("botones-claro")
   }
   
 }
 
-
-
 botonModoClaro.onclick=()=>{
-  if(botonModoOscuro.style.display="flex"){
+  if(botonModoOscuro.style.display="block"){
     botonModoClaro.style.display="none"
+     modoClaro.classList.add("header-claro")
+     formularioClaro.classList.add("seccion-claro")
+     mainClaro.classList.add("main-claro")
+     botonImagen.classList.add("botones-claro")
+     botonTexto.classList.add("botones-claro")
+     botonModoOscuro.classList.add("botones-claro")
+     botonModoClaro.classList.add("botones-claro")
+     botonDescargarMeme.classList.add("botones-claro")
   }
   
 }

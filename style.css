@@ -4,6 +4,7 @@ html, body{
 
 
 
+
 header{
     display: flex;
     flex-direction: column;
@@ -229,5 +230,35 @@ textarea{
     
 }
 .mostrar{
-    display:block;
+    display: flex;
 }
+
+
+.header-claro{
+    background-color:rgb(221, 172, 80);
+    color:black;
+}
+.botones-claro{
+    background-color:rgb(221, 172, 80);
+    color:black;
+}
+.botones-claro:hover{
+    color:rgb(56, 56, 56);
+    background-color:rgb(221, 172, 80);
+    
+    
+}
+
+.main-claro{
+    background-color:rgb(218, 188, 132);
+    color:black
+
+}
+.seccion-claro{
+    background-color: rgb(206, 161, 78);
+    color:black
+    
+
+} 
+
+
