@@ -30,14 +30,14 @@
 
         <div class="contenedor-central">
             <div class="texto-superior-inferior">
-                <h2>TOP TEXT</h2>
+                <h2 id="texto-superior">TOP TEXT</h2>
 
             </div>
             <div class="espacio-de-meme">
 
             </div>
             <div class="texto-superior-inferior">
-                <h2> BOTTOM TEXT</h2>
+                <h2 id="texto-inferior"> BOTTOM TEXT</h2>
             </div>
 
         </div>
@@ -49,6 +49,8 @@
 
 
     </main>
+
+    <!-- Fin del main, comienzo de seccion formulario Imagen -->
 
     <section id="formulario-imagen" class="formulario-imagen-derecha">
         <div class="contenedor-cerrar">
@@ -117,7 +119,7 @@
 
 
             </legend>
-            <button class="boton-reestablecer-filtros">RESTABLECER FILTROS</button>
+            <button id="boton-claro"class="boton-reestablecer-filtros">RESTABLECER FILTROS</button>
 
 
 
@@ -128,7 +130,7 @@
 
 
 
-
+     <!-- fin seccion fomulario Imagen, comienzo de formulario Texto  -->
 
 
     <section id="formulario-texto" class="formulario-texto-derecha">
@@ -140,7 +142,7 @@
         <h3>TEXTO</h3>
         <form>
             <label class="label-tamaño"> TEXTO SUPERIOR</label>
-            <textarea name="texto superior" cols="15" rows="3">Top Text</textarea>
+            <textarea id="input-texto-superior" name="texto superior" cols="15" rows="3">Top Text</textarea>
 
 
 
@@ -150,7 +152,7 @@
 
 
             <label class="label-tamaño"> TEXTO INFERIOR </label>
-            <textarea name="texto inferiror" cols="15" rows="3">Top Text</textarea>
+            <textarea id="input-texto-inferior" name="texto inferiror" cols="15" rows="3">Top Text</textarea>
             <label class="estilo-superior-inferior">
                 <input type="checkbox" name="acepto" value="acepto" /> Sin texto inferior
             </label>
@@ -185,7 +187,7 @@
 
                 <div class="contenedor-chico-fondo-color">
                     <label class="estilo-formulario "> COLOR </label>
-                    <input class="tamaño-fondo-color" name="color del texto" type="color" aria-label="color del texto">
+                    <input id="input-texto-color" class="tamaño-fondo-color" name="color del texto" type="color" aria-label="color del texto">
                 </div>
 
                 <div class="contenedor-chico-fondo-color">

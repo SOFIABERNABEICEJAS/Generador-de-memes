@@ -2,17 +2,13 @@ html, body{
     margin: 0%; 
 }
 
-
-
-
 header{
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:rgb(105, 61, 3);
-    color:wheat;
-    
+    background-color:#855e26;
+    color:white; 
     width: 100%;
 
  }
@@ -24,20 +20,19 @@ header{
 }
 .estilos-botones-header{
     height: 30px;
-    border: solid rgb(105, 61, 3);
-    background-color:rgb(105, 61, 3);
-    color: wheat;
+    border: solid #855e26;
+    background-color:#855e26;
+    color: white;
     font-size: 16px;
     margin:8px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 
-
 }
 .estilos-botones-header:active{
-    background-color:rgb(116, 67, 4) ;
+    background-color:#855e26 ;
 }
 .estilos-botones-header:hover{
-    color:white;
+    color:wheat;
 }
 
 main{
@@ -46,7 +41,7 @@ main{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color:rgb(146, 89, 15);
+    background-color:#a67c42;
 }
 
 .contenedor-central{
@@ -58,7 +53,7 @@ main{
 }
 .texto-superior-inferior{
     width: 400px;
-    height: 60px;
+    /* height: 60px; */
     background-color: white;
     display: flex;
     align-items: center;
@@ -76,17 +71,17 @@ main{
 
 .boton-descargar-meme{
     height: 40px;
-    border: 3px solid rgb(105, 61, 3);
-    background-color:rgb(105, 61, 3);
-    color: wheat;
+    border: 3px solid #855e26;
+    background-color:#855e26;
+    color: white;
     font-size: 16px;
     margin-top: 15px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
  }
  .boton-descargar-meme:hover{
-    background-color:rgb(110, 65, 5);
-    color:white;
-    border: 1px solid rgb(192, 163, 125)
+    background-color:#855e26;
+    color:wheat;
+    border: 1px solid  white
     
 
  }
@@ -100,14 +95,14 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 120vh;
     width: 250px;
+    padding-top: 10px;
     position:absolute;
     right: 0px;
     top: 0px;
-    background-color:rgb(92, 54, 4);
-    color:wheat;
+    background-color:#7a551c;
+    color:white;
     }
 .estilo-formulario{
     display: flex;
@@ -128,8 +123,7 @@ form{
     
      width: 95px;
      height: 30px;
-     
-     
+        
  }
  .contenedor-fondo-color{
      display: flex;
@@ -151,33 +145,29 @@ form{
     margin: 6px 0px 0px 20px;   
     width: 150px;
     height: 40px;
-    color:wheat;
-    background-color:rgb(92, 54, 4);
+    color:white;
+    background-color:#7a551c;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
 .boton-reestablecer-filtros:hover{
-    background-color:rgb(110, 65, 5);
-    color:white;
- 
+    background-color:#946825;
+    color:wheat;
  }
 
- 
  .contenedor-cerrar{
      width: 200px;
      display: flex;
      justify-content:flex-start;
-  
 
  }
  .boton-cerrar-formulario{
     
-    border: solid rgb(92, 54, 4); ;
+    border: solid #7a551c ;
     background-color:transparent;
-    color:wheat;
-    
-    
+    color:white;
  }
+
 /* seccion formulario texto */
 
 
@@ -185,15 +175,14 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     height: 120vh;
     width: 250px;
-    background-color:rgb(92, 54, 4);
-    color:wheat;
+    padding-top: 10px;
+    background-color:#7a551c;
+    color:white;
     position:absolute;
     right: 0px;
     top: 0px;  
-  
 }
 
 textarea{
@@ -213,7 +202,6 @@ textarea{
 }
 .tamaño-type-number{
     width: 90px;
-
 }
 .botones-contorno{
     width: 65px;
@@ -223,42 +211,43 @@ textarea{
 
 /* fin del formulario de texto */
 
+
 /* estilos js */
 
 .ocultar{
-    display: none;
-    
+    display: none;   
 }
 .mostrar{
     display: flex;
 }
-
-
 .header-claro{
-    background-color:rgb(221, 172, 80);
+    background-color: #c9a974;
     color:black;
 }
+
 .botones-claro{
-    background-color:rgb(221, 172, 80);
+    background-color:#c9a974;
     color:black;
+    border: solid ;
+
 }
 .botones-claro:hover{
-    color:rgb(56, 56, 56);
-    background-color:rgb(221, 172, 80);
-    
-    
+    color:rgb(63, 61, 61);
+    background-color:#c9a974;
 }
 
 .main-claro{
-    background-color:rgb(218, 188, 132);
+    background-color:#eee2b4;
     color:black
 
 }
 .seccion-claro{
-    background-color: rgb(206, 161, 78);
+    background-color: #b68e56;
     color:black
-    
 
 } 
 
-
+.seccion-claro button:hover{
+    background-color: #b48e59;
+    color:black
+}
