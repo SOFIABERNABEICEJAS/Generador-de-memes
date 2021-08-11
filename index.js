@@ -106,8 +106,16 @@ inputTextoInferior.oninput=()=>{
 
 
 //ocultar texto superior
-checkboxSuperior.oninput=()=>{
-  fondoSuperior.classList.toggle("ocultar")
+
+
+checkboxSuperior.onclick=()=>{
+    if(checkboxSuperior.checked){
+      fondoSuperior.classList.add("ocultar")
+    }
+    else{
+      fondoSuperior.classList.remover("ocultar")
+    }
+  
    
   }
   
@@ -157,8 +165,11 @@ inputFondoColor.oninput=()=>{
 let selectEstiloLetra = document.getElementById("select-estilo-letra")
 
 
-  console.log("selectEstiloLetra.options")
+  //console.log("selectEstiloLetra.options")
+  
+ // selectEstiloLetra.oninput=()=>{
 
+  //}
 
 
 
