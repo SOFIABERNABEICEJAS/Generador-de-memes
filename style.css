@@ -48,12 +48,11 @@ main{
     margin-top: 15px; 
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    
 }
 .texto-superior-inferior{
     width: 400px;
-    /* height: 60px; */
+    height: 60px;
     background-color: white;
     display: flex;
     align-items: center;
@@ -61,11 +60,10 @@ main{
 }
 .espacio-de-meme{
     width: 400px;
-    height: 250px;
-    background-color: black;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: 300px;
+    background-color: black;  
+    overflow: hidden;  
+ 
 }
 
 
