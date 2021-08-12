@@ -15,20 +15,24 @@ let inputTextoSuperior = document.getElementById("input-texto-superior")
 let textoInferior= document.getElementById("texto-inferior")
 let inputTextoInferior=document.getElementById("input-texto-inferior")
 let inputTextoColor= document.getElementById("input-texto-color")
-
+let inputTamañoDeLetra= document.getElementById("input-tamaño-de-letra")
 let claseOcultar=document.querySelector(".ocultar")
-
+let selectEstiloLetra = document.getElementById("select-estilo-letra")
 
 
 //IMAGEN
 let inputColorFondoMeme =document.getElementById("input-color-fondo-meme")
 let espacioMeme =document.getElementById("fondo-espacio-meme")
 
+
+
+
 //boton imagen aparecer-desaparecer 
 botonImagen.onclick=()=>{    
 seccionImagen.style.display="flex"
 seccionTexto.style.display="none"
 }
+
 //boton cerrar imagen
 
 botonCerrarImagen.onclick=()=>{
@@ -129,25 +133,23 @@ checkboxSuperior.onclick=()=>{
   let botonTextoIzquierda=document.getElementById("boton-texto-izquierda")
   let botonTextoCentro=document.getElementById("boton-texto-centro")
   let botonTextoDerecha=document.getElementById("boton-texto-derecha")
-
+  
   botonTextoIzquierda.onclick=()=>{
-  
-     textoSuperior.style.textAlign="left"
-     textoInferior.style.textAlign="left"
-    
-  }
-
+   
+      fondoSuperior.classList.add("alinear-texto-izquierda")
+      fondoInferior.classList.add("alinear-texto-izquierda")
+     }
+ 
   botonTextoCentro.onclick=()=>{
-    textoInferior.style.textAlign="left"
-    textoSuperior.style.textAlign="center"
-
-  }
-  botonTextoDerecha.onclick=()=>{
-    textoSuperior.style.textAlign="right"
-    textoInferior.style.textAlign="right"
-  }
-
+   fondoSuperior.classList.add("alinear-texto-centro")
+    fondoInferior.classList.add("alinear-texto-centro")
+     }
   
+  botonTextoDerecha.onclick=()=>{
+    fondoSuperior.classList.add("alinear-texto-derecha")
+    fondoInferior.classList.add("alinear-texto-derecha")
+   }
+
 
  //cambiar color texto
 inputTextoColor.oninput=()=>{
@@ -162,20 +164,61 @@ inputFondoColor.oninput=()=>{
 }
 
 
-let selectEstiloLetra = document.getElementById("select-estilo-letra")
+//cambiar estilo de letra
+
+  selectEstiloLetra.addEventListener('change', () =>{
+    textoSuperior.style.fontFamily = selectEstiloLetra.value;
+    textoInferior.style.fontFamily = selectEstiloLetra.value;
+  })
+
+//cambiar tamaño de letra    
+    
+    inputTamañoDeLetra.addEventListener('input', () =>{
+     textoSuperior.style.fontSize =inputTamañoDeLetra.value + "px"
+    textoInferior.style.fontSize = inputTamañoDeLetra.value + "px"
+    })
 
 
-  //console.log("selectEstiloLetra.options")
-  
- // selectEstiloLetra.oninput=()=>{
+ //fondo transparente
+ const inputFondoTransparente = document.getElementById("input-fondo-transparente")
+ 
+ 
+  inputFondoTransparente.onclick=()=>{
+  if(inputFondoTransparente.checked){
+    fondoSuperior.classList.add("ocultar")
+    fondoInferior.classList.add("ocultar")
+    
+  }
+  else{
+    fondoSuperior.classList.remover("ocultar")
+    fondoInferior.classList.remove("ocultar")
+  }
 
-  //}
+ 
+}
+
+//Cambiarcontorno claro-oscuro
+
+const botonContornoClaro = document.getElementById("boton-contorno-claro")
+const botonContornoOscuro = document.getElementById("boton-contorno-oscuro")
+const botonSinContorno = document.getElementById("boton-sin-contorno")
+botonContornoClaro.onclick=()=>{
+  textoSuperior.classList.("contorno-claro")
+  textoInferior.classList("contorno-claro")
+}
+
+ botonContornoOscuro.onclick=()=>{
+  textoSuperior.classList("contorno-oscuro")
+  textoInferior.classList("contorno-oscuro")
+ }
+botonSinContorno.onclick=()=>{
+  textoSuperior.classList("sin-contorno")
+  textoInferior.classList("sin-contorno")
+
+}
 
 
-
-
-
-
+//cambiar tamaño del fondo superior-inferior
 
 
 //IMAGEN
@@ -201,6 +244,21 @@ inputColorFondoMeme.oninput=()=>{
 
 let inputBrillo = document.getElementById("input-brillo")
 
-//inputBrillo.oninput=()=>{
-  //espacioImagen=
-//}
+
+
+
+imputBrillo.oninput=()=>{
+  espacioMeme.style.filter=opacity(inputBrillo.value)
+  
+
+}
+
+// let cambio=()=>{
+
+//  inputBrillo.value=espacioMeme.classList.add("")
+// }
+// espacioMeme
+// inputBrillo.oninput=()=>{
+// espacioImagen.style.opacity=inputBrillo.value
+
+// }

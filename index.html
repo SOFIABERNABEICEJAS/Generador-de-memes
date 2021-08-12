@@ -6,6 +6,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -93,18 +96,18 @@
             </div>
             <legend class="range-imagen">
                 <label class="range-imagen">Brillo
-                    <input id="input-brillo" type="range" min="0" max="1" value="1">
+                    <input id="input-brillo" name="brillo" type="range" min="0" max="1" value="1">
                 </label>
                 <label class="range-imagen">Opacidad
-                    <input type="range" min="0" max="1" value="1">
+                    <input id="input-opacidad"type="range" min="0" max="1" value="1">
                 </label>
 
                 <label class="range-imagen">Contraste
-                    <input type="range" min="100" max="1000" value="100">
+                    <input id="input-contraste" type="range" min="100" max="1000" value="100">
                 </label>
 
                 <label class="range-imagen">Desenfoque
-                    <input type="range" min="0" max="10" value="0">
+                    <input id="input-desenfoque" type="range" min="0" max="10" value="0">
                 </label>
 
                 <label class="range-imagen">Escala de grises
@@ -172,19 +175,19 @@
 
             <label class="label-tamaño">FUENTES</label>
             <select id="select-estilo-letra" class="estilo-ancho-margen" name="opciones">
-                <option value="arieal">Arial</option>
-                <option value="Arial Black">Arial Black</option>
-                <option value="Americam">Americam</option>
-                <option value="Andale Mano">Andale Mano</option>
-                <option value="Comic Sans MS">Comic Sans MS</option>
-                <option value="Helvetica">Helvetica</option>
-                <option value="Impact" salected>Impact</option>
-                <option value="Verdana">Verdana</option>
-                <option value="Times New Roman">Times New Roman</option>
+                <option  value="arieal">Arial</option>
+                <option  value="Arial Black">Arial Black</option>
+                <option  value="Americam">Americam</option>
+                <option  value="Andale Mano">Andale Mano</option>
+                <option  value="Note Sans">Note Sans </option>
+                <option  value="Helvetica">Helvetica</option>
+                <option  value="Impact" selected>Impact</option>
+                <option  value="Verdana">Verdana</option>
+                <option  value="Times New Roman">Times New Roman</option>
             </select>
             <div>
                 <label class="label-tamaño">
-                    <input class="tamaño-type-number" type="number" name="tamaño de letra" min="16" max="40"
+                    <input id="input-tamaño-de-letra"class="tamaño-type-number" type="number" name="tamaño de letra" min="16" max="40"
                         aria-label="tamaño de letra">
                 </label>
                 <button id="boton-texto-izquierda"><i class="fa fa-align-left"></i></button>
@@ -210,13 +213,13 @@
             </div>
 
             <label class="estilo-superior-inferior">
-                <input type="checkbox" name="acepto" value="acepto" />Fondo transparente
+                <input id="input-fondo-transparente" type="checkbox" name="acepto" value="acepto" />Fondo transparente
             </label>
             <label class="label-tamaño"> CONTORNO</label>
             <div>
-                <button class="botones-contorno">Ninguno</button>
-                <button class="botones-contorno">Claro</button>
-                <button class="botones-contorno">Oscuro</button>
+                <button id="boton-sin-contorno" class="botones-contorno">Ninguno</button>
+                <button id="boton-contorno-claro" class="botones-contorno">Claro</button>
+                <button id="boton-contorno-oscuro" class="botones-contorno">Oscuro</button>
             </div>
 
 

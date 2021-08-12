@@ -62,7 +62,8 @@ main{
     width: 400px;
     height: 300px;
     background-color: black;  
-    overflow: hidden;  
+    overflow: hidden; 
+    
  
 }
 
@@ -248,4 +249,26 @@ textarea{
 .seccion-claro button:hover{
     background-color: #b48e59;
     color:black
+}
+
+.alinear-texto-izquierda{
+    justify-content:flex-start;
+}
+.alinear-texto-centro{
+    justify-content: center;
+}
+.alinear-texto-derecha{
+    justify-content:flex-end;
+}
+
+.contorno-claro{
+    
+    text-shadow: 3px 3px 2px  white ;
+}
+.contorno-oscuro{
+    text-shadow: 3px 3px 2px  black ;
+
+}
+.sin-contorno{
+    text-shadow: none;
 }
