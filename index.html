@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -70,7 +70,7 @@
 
         </div>
         <h3>IMAGEN</h3>
-        <form>
+        <form id="formulario">
             <label class="estilo-formulario label-tamaño"> URL:
                 <input id="input-imagen" type="url" name="imagen personal" />
             </label>
@@ -96,42 +96,41 @@
             </div>
             <legend class="range-imagen">
                 <label class="range-imagen">Brillo
-                    <input id="input-brillo" name="brillo" type="range" min="0" max="1" value="1">
+                    <input id="input-brillo" name="brillo" step="0.1" type="range" min="0" max="1" value="1">
                 </label>
                 <label class="range-imagen">Opacidad
-                    <input id="input-opacidad"type="range" min="0" max="1" value="1">
+                    <input id="input-opacidad"  type="range" name="opacidad" step="0.1" min="0" max="1" value="1">
                 </label>
 
                 <label class="range-imagen">Contraste
-                    <input id="input-contraste" type="range" min="100" max="1000" value="100">
+                    <input id="input-contraste"  type="range" name="contraste" step="0.1" min="100" max="1000" value="100">
                 </label>
 
                 <label class="range-imagen">Desenfoque
-                    <input id="input-desenfoque" type="range" min="0" max="10" value="0">
+                    <input id="input-desenfoque" type="range" name="desenfoque" step="0.1"min="0" max="10" value="0">
                 </label>
 
                 <label class="range-imagen">Escala de grises
-                    <input type="range" min="0" max="100" value="0">
+                    <input id="input-escala-grises" name="escala de grises"type="range" step="0.1" min="0" max="100" value="0">
                 </label>
 
-
                 <label class="range-imagen">Sepia
-                    <input type="range" min="0" max="100" value="0">
+                    <input id="input-sepia" type="range" step="0.1" min="0" max="100" value="0">
                 </label>
 
                 <label class="range-imagen">Hue
-                    <input type="range" min="0" max="360" value="0">
+                    <input id="input-hue" type="range" name="hue" step="0.1" min="0" max="360" value="0">
                 </label>
                 <label class="range-imagen">Saturado
-                    <input type="range" min="100" max="1000" value="100">
+                    <input id="input-saturado" type="range" name="saturado" step="0.1" min="100" max="1000" value="100">
                 </label>
                 <label class="range-imagen"> Negativo
-                    <input type="range" min="0" max="1" value="0">
+                    <input  id="input-negativo" type="range"  name="negativo" step="0.1" min="0" max="1" value="0">
                 </label>
 
 
             </legend>
-            <button id="boton-claro" class="boton-reestablecer-filtros">RESTABLECER FILTROS</button>
+            <button id="boton-restablecer-filtros" class="boton-reestablecer-filtros">RESTABLECER FILTROS</button>
 
 
 
@@ -152,7 +151,7 @@
         </div>
 
         <h3>TEXTO</h3>
-        <form>
+        <form id="formulario">
             <label class="label-tamaño"> TEXTO SUPERIOR</label>
             <textarea id="input-texto-superior" name="texto superior" cols="15" rows="3">Top Text</textarea>
 
@@ -177,9 +176,9 @@
             <select id="select-estilo-letra" class="estilo-ancho-margen" name="opciones">
                 <option  value="arieal">Arial</option>
                 <option  value="Arial Black">Arial Black</option>
-                <option  value="Americam">Americam</option>
+                <option  value="American Typewriter">American Typewriter</option>
                 <option  value="Andale Mano">Andale Mano</option>
-                <option  value="Note Sans">Note Sans </option>
+                <option  value="Comic Sans MS">Comic Sans MS </option>
                 <option  value="Helvetica">Helvetica</option>
                 <option  value="Impact" selected>Impact</option>
                 <option  value="Verdana">Verdana</option>
@@ -187,7 +186,7 @@
             </select>
             <div>
                 <label class="label-tamaño">
-                    <input id="input-tamaño-de-letra"class="tamaño-type-number" type="number" name="tamaño de letra" min="16" max="40"
+                <input id="input-tamaño-de-letra"class="tamaño-type-number" type="number" name="tamaño de letra" min="16" max="40"
                         aria-label="tamaño de letra">
                 </label>
                 <button id="boton-texto-izquierda"><i class="fa fa-align-left"></i></button>
@@ -224,10 +223,10 @@
 
 
             <label class="label-tamaño"> ESPACIADO</label>
-            <input class="estilo-ancho-margen" type="number" name="espaciado" min="10" max="50"
+            <input id="input-tamaño-espaciado"class="estilo-ancho-margen" type="number" name="espaciado" min="20" max="80"
                 aria-label="es el espacio para escribir arriba y abajo de la foto">
             <label class="label-tamaño">INTERLINEADO</label>
-            <select class="estilo-ancho-margen" name="opciones">
+            <select id="select-interlineado" class="estilo-ancho-margen" name="opciones">
                 <option value="0.8">0.8</option>
                 <option value="1">1</option>
                 <option value="1.2">1.2</option>

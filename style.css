@@ -262,13 +262,13 @@ textarea{
 }
 
 .contorno-claro{
-    
-    text-shadow: 3px 3px 2px  white ;
+    text-shadow: 1px 1px 2px  white ;
 }
 .contorno-oscuro{
-    text-shadow: 3px 3px 2px  black ;
+    text-shadow: 1px 1px 2px  black ;
 
 }
 .sin-contorno{
     text-shadow: none;
+    
 }
