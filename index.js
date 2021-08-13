@@ -1,4 +1,4 @@
-// boton imagen abrir-cerrar
+
 let botonImagen =document.getElementById("boton-imagen")
 let seccionImagen=document.getElementById("formulario-imagen")
 let botonTexto = document.getElementById("boton-texto")

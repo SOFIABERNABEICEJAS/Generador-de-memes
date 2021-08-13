@@ -82,7 +82,6 @@ main{
     color:wheat;
     border: 1px solid  white
     
-
  }
 
 
@@ -118,8 +117,7 @@ form{
      flex-direction: column;
     
     }
- .tamaño-fondo-color{
-    
+ .tamaño-fondo-color{ 
      width: 95px;
      height: 30px;
         
@@ -131,7 +129,6 @@ form{
  .contenedor-chico-fondo-color{
   margin: 2px;
  }
-
 
 .range-imagen{ 
     display: flex;
