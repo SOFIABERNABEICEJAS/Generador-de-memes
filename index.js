@@ -310,8 +310,13 @@ botonReestablecerFiltros.addEventListener("click", () =>{
     restablecerFiltros();
 });
 
-const form=document.getElementById("formulario")
+const formularioImagen=document.getElementById("formulario-imagen")
+const formularioTexto=document.getElementById("formulario-texto")
 
-FormData.onisubmite=(Event)=>{
-  Event.preventDefault()
+
+formularioImagen.onsubmite=(event)=>{
+  event.preventDefault()
+}
+formularioTexto.onsubmite=(event)=>{
+  event.preventDefault()
 }
