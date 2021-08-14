@@ -21,11 +21,11 @@
     <header id="modo-claro">
         <h1> GENERADOR DE MEMES</h1>
         <div class="botones-header">
-            <button id="boton-imagen" type="button" class="estilos-botones-header"><i class="fa fa-photo"></i> Imagen</button>
-            <button id="boton-texto" type="button"class="estilos-botones-header"><i class="fa fa-font"></i> Texto</button>
-            <button id="boton-modo-oscuro"type="button" class="estilos-botones-header ocultar"><i class="fa fa-moon-o"></i> Modo
+            <button id="boton-imagen" type="button" class="estilos-botones-header" aria-label="boton para abrir seccion imagen" ><i class="fa fa-photo"></i> Imagen</button>
+            <button id="boton-texto" type="button"class="estilos-botones-header" aria-label="boton para abrir seccion texto" ><i class="fa fa-font"></i> Texto</button>
+            <button id="boton-modo-oscuro"type="button" class="estilos-botones-header ocultar" aria-label="boton para cambiar modo escuro y modo claro" ><i class="fa fa-moon-o"></i> Modo
                 Oscuro</button>
-            <button id="boton-modo-claro" type="button" class="estilos-botones-header "><i class="fa fa-sun-o"></i> Modo
+            <button id="boton-modo-claro" type="button" class="estilos-botones-header " aria-label="boton para cambiar modo escuro y modo claro"><i class="fa fa-sun-o"></i> Modo
                 Claro</button>
 
         </div>
@@ -33,31 +33,27 @@
     </header>
     <main id="main-claro">
 
-        <div id="contenedor-central"class="contenedor-central">
-            <div id="fondo-superior" class="texto-superior-inferior fijar-superior">
-                <h2 id="texto-superior">TOP TEXT</h2>
+        <section id="contenedor-central" class="contenedor-central">
+         
+                <div id="fondo-superior" class="texto-superior">
+                    <h2 id="texto-superior">TOP TEXT</h2>
+                </div>
 
-            </div>
+                <div  id="fondo-espacio-meme"  class="espacio-de-meme">
 
-
-            <div  id="fondo-espacio-meme"  class="espacio-de-meme">
-
-
+                    
                 
-                <img id="espacio-imagen" src="" alt="imagen del meme" aria-label="imagen del meme">
-            </div>
-
-
-           </div>
-            <div id="fondo-inferior" class="texto-superior-inferior fijar-inferior">
-                 <h2 id="texto-inferior"> BOTTOM TEXT</h2>
-            </div>
-
-
-        </div>
+                  <img id="espacio-imagen" src="" alt="imagen del meme" aria-label="imagen del meme">
+                </div>
+                
+               <div id="fondo-inferior" class="texto-inferior ">
+                   <h2 id="texto-inferior"> BOTTOM TEXT</h2>
+                </div>
+          
+        </section>
 
         <div>
-            <button type="button" id="boton-descargar-meme" type="button" class="boton-descargar-meme">Descargar meme</button>
+            <button type="button" id="boton-descargar-meme" type="button" class="boton-descargar-meme" aria-label="boton para descargar meme" >Descargar meme</button>
         </div>
 
 
@@ -69,7 +65,7 @@
 
     <section id="formulario-imagen" class="formulario-imagen-derecha">
         <div class="contenedor-cerrar">
-            <button type="button" id="boton-cerrar-imagen" class="boton-cerrar-formulario"><i class="fa fa-close"></i></button>
+            <button type="button" id="boton-cerrar-imagen" class="boton-cerrar-formulario" aria-label="boton para cerrar secccion imagen" ><i class="fa fa-close"></i></button>
 
         </div>
         <h3>IMAGEN</h3>
@@ -85,7 +81,7 @@
 
                 </div>
                 <div class="contenedor-chico-fondo-color">
-                    <select id="seleccionar-fondo-meme" class="tamaño-fondo-color" name="opciones">
+                    <select id="seleccionar-fondo-meme" aria-label="seleccionar estilo de fondo" class="tamaño-fondo-color" name="opciones">
                         <option value="" selected>Ninguno</option>
                         <option value="Aclarar">Aclarar</option>
                         <option value="Oscurecer">Oscurecer</option>
@@ -97,7 +93,7 @@
                 </div>
 
             </div>
-            <legend class="range-imagen">
+            <div class="range-imagen" aria-label="rangos para cambiar la propiedad del meme">
                 <label class="range-imagen">Brillo
                     <input id="input-brillo" name="brillo" step="0.1" type="range" min="0" max="1" value="1">
                 </label>
@@ -132,8 +128,8 @@
                 </label>
 
 
-            </legend>
-            <button id="boton-restablecer-filtros" type="button"  class="boton-restablecer-filtros ">RESTABLECER FILTROS</button>
+            </div>
+            <button id="boton-restablecer-filtros" type="button" aria-label="boton restablecer filtros" class="boton-restablecer-filtros ">RESTABLECER FILTROS</button>
 
 
 
@@ -149,7 +145,7 @@
 
     <section id="formulario-texto" class="formulario-texto-derecha">
         <div class="contenedor-cerrar">
-            <button type="button" id="boton-cerrar-texto" class="boton-cerrar-formulario"><i class="fa fa-close"></i></button>
+            <button type="button" id="boton-cerrar-texto" class="boton-cerrar-formulario" aria-label="boton para cerrar seccion texto"><i class="fa fa-close"></i></button>
 
         </div>
 
@@ -176,7 +172,7 @@
 
 
             <label class="label-tamaño">FUENTES</label>
-            <select id="select-estilo-letra" class="estilo-ancho-margen" name="opciones">
+            <select id="select-estilo-letra" class="estilo-ancho-margen" aria-label="selector para cambiar el estilo de letra" name="opciones">
                 <option  value="arieal">Arial</option>
                 <option  value="Arial Black">Arial Black</option>
                 <option  value="American Typewriter">American Typewriter</option>
@@ -189,12 +185,12 @@
             </select>
             <div>
                 <label class="label-tamaño">
-                <input id="input-tamaño-de-letra"class="tamaño-type-number" type="number" name="tamaño de letra" min="16" max="40"
+                <input id="input-tamaño-de-letra"class="tamaño-type-number" type="number" name="tamaño de letra" min="16" max="30"
                         aria-label="tamaño de letra">
                 </label>
-                <button type="button" id="boton-texto-izquierda"><i class="fa fa-align-left"></i></button>
-                <button type="button" id="boton-texto-centro"><i class="fa fa-align-center"></i></button>
-                <button type="button" id="boton-texto-derecha"> <i class="fa fa-align-right"></i></button>
+                <button type="button" id="boton-texto-izquierda" aria-label="boton para colocar el texto  a la izquierda"><i class="fa fa-align-left"></i></button>
+                <button type="button" id="boton-texto-centro" aria-label="boton para colocar el texto centrado"><i class="fa fa-align-center"></i></button>
+                <button type="button" id="boton-texto-derecha" aria-label="boton para colocar el texto a la derecha"> <i class="fa fa-align-right"></i></button>
 
             </div>
             <div class="contenedor-fondo-color">
@@ -219,17 +215,17 @@
             </label>
             <label class="label-tamaño"> CONTORNO</label>
             <div>
-                <button type="button" id="boton-sin-contorno" class="botones-contorno">Ninguno</button>
-                <button type="button" id="boton-contorno-claro" class="botones-contorno">Claro</button>
-                <button type="button" id="boton-contorno-oscuro" class="botones-contorno">Oscuro</button>
+                <button type="button" id="boton-sin-contorno" class="botones-contorno" aria-label="boton sin contorno en letra">Ninguno</button>
+                <button type="button" id="boton-contorno-claro" class="botones-contorno" aria-label="boton contorno claro en letra"> Claro</button>
+                <button type="button" id="boton-contorno-oscuro" class="botones-contorno" aria-label="boton contorno oscuro en letra">Oscuro</button>
             </div>
 
 
             <label class="label-tamaño"> ESPACIADO</label>
-            <input id="input-tamaño-espaciado"class="estilo-ancho-margen" type="number" name="espaciado" min="20" max="80"
-                aria-label="es el espacio para escribir arriba y abajo de la foto">
+            <input id="input-tamaño-espaciado"class="estilo-ancho-margen" type="number" name="espaciado" min="20" max="50"
+                aria-label="espacio entre letras">
             <label class="label-tamaño">INTERLINEADO</label>
-            <select id="select-interlineado" class="estilo-ancho-margen" name="opciones">
+            <select id="select-interlineado" class="estilo-ancho-margen" aria-label="seleccionar interlineado" name="opciones">
                 <option value="0.8">0.8</option>
                 <option value="1">1</option>
                 <option value="1.2">1.2</option>

@@ -48,44 +48,50 @@ main{
     margin-top: 15px; 
     display: flex;
     flex-direction: column;
+   
     
 }
-.texto-superior-inferior{
-    width: 400px;
-    height: 60px;
+.texto-superior {
+    width: 380px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: white;
     display: flex;
     align-items: center;
     justify-content: center;
+   
+
+}
+.texto-inferior{
+    width: 380px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
 }
 .espacio-de-meme{
     width: 400px;
     height: 300px;
     background-color: black;  
     overflow: hidden; 
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    
  
 }
 
-img{
-    width: 100%;
-    height: auto;
-
-}
 
 .boton-descargar-meme{
     height: 40px;
     border: 3px solid #855e26;
     background-color:#855e26;
     color: white;
-    font-size: 16px;
+    font-size: 18px;
     margin-top: 15px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
  }
- .boton-descargar-meme:hover{
+
+.boton-descargar-meme:hover{
     background-color:#855e26;
     color:wheat;
     border: 1px solid  white
@@ -101,15 +107,18 @@ img{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 120vh;
+    height: 110vh;
     width: 250px;
     padding-top: 10px;
     position:absolute;
     right: 0px;
-    top: 0px;
+    top: 6px;
+    border-radius: 20px;
     background-color:#7a551c;
     color:white;
+    box-shadow: rgb(140, 143, 146) 0px 20px 30px -10px;
     }
+
 .estilo-formulario{
     display: flex;
     flex-direction: column;
@@ -172,6 +181,8 @@ form{
     color:white;
  }
 
+
+
 /* seccion formulario texto */
 
 
@@ -179,14 +190,16 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 120vh;
+    height: 110vh;
     width: 250px;
     padding-top: 10px;
     background-color:#7a551c;
     color:white;
     position:absolute;
     right: 0px;
-    top: 0px;  
+    top: 6px;  
+    border-radius: 20px;
+    box-shadow: rgb(140, 143, 146) 0px 20px 30px -10px;
 }
 
 textarea{
@@ -213,7 +226,6 @@ textarea{
 }
 
 
-/* fin del formulario de texto */
 
 
 /* estilos js */
@@ -221,6 +233,8 @@ textarea{
 .ocultar{
     display: none;   
 }
+
+/* estilos modo claro */
 
 .header-claro{
     background-color: #c9a974;
@@ -230,6 +244,12 @@ textarea{
 .botones-claro{
     background-color:#c9a974;
     color:black;
+    border: solid ;
+
+}
+.botones-claro:hover{
+    background-color:#c9a974;
+    color:rgb(73, 73, 73);
     border: solid ;
 
 }
@@ -246,20 +266,29 @@ textarea{
 
 } 
 
-.seccion-claro button:hover{
-    background-color: #b48e59;
+.seccion-claro:hover{
+    background-color: #b68e56;
     color:black
 }
 
+/* cambio de alineacion */
+
+
 .alinear-texto-izquierda{
     justify-content:flex-start;
+  
+    
 }
 .alinear-texto-centro{
     justify-content: center;
+    
 }
 .alinear-texto-derecha{
     justify-content:flex-end;
+       
 }
+
+ /* estilo de contorno */
 
 .contorno-claro{
     text-shadow: 2px 2px 2px  white ;
@@ -270,6 +299,52 @@ textarea{
 }
 .sin-contorno{
     text-shadow: none;
-  
+   
+}
+
+/* fondo transparende */
+
+.transparente-contenedor-central{
+    position: relative;
+}
+.transparente-texto-superior{
+    position: absolute; 
+    top:3px;
+    background-color: transparent;
+
+}
+.transparente-texto-inferior{
+    position: absolute; 
+    bottom: 3px;
+    background-color: transparent;
     
 }
+
+
+
+
+
+
+/* responsive */
+/* 
+@media screen and (max-width:940px){
+
+    .formulario-imagen-derecha{
+        width: 240px;
+        display: block;
+        
+        
+    }
+.formulario-texto-derecha{
+    width: 240pz;
+    display: block;
+}
+/* }
+@media screen and (max-width:600px){
+
+    .formulario-imagen-derecha{
+        width: 240px;
+        
+    }
+
+} */ 

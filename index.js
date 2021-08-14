@@ -29,7 +29,7 @@ const selectInterlineado = document.getElementById("select-interlineado")
 const inputTamañoEspaciado= document.getElementById("input-tamaño-espaciado")
 const inputColorFondoMeme = document.getElementById("input-color-fondo-meme")
 const espacioMeme = document.getElementById("fondo-espacio-meme")
-     const contenedorCentral = document.getElementById("contenedor-central")
+const contenedorCentral = document.getElementById("contenedor-central")
 const botonTextoIzquierda=document.getElementById("boton-texto-izquierda")
 const botonTextoCentro=document.getElementById("boton-texto-centro")
 const botonTextoDerecha=document.getElementById("boton-texto-derecha")
@@ -45,7 +45,7 @@ const inputHue=document.getElementById("input-hue")
 const inputSaturado=document.getElementById("input-saturado")
 const inputNegativo=document.getElementById("input-negativo")
 const botonRestablecerFiltros = document.getElementById("boton-restablecer-filtros")
-
+const inputFondoTransparente = document.getElementById("input-fondo-transparente")
 
 
 
@@ -129,6 +129,7 @@ inputTextoInferior.oninput=()=>{
 
 
 checkboxSuperior.onclick=()=>{
+  
   fondoSuperior.classList.toggle("ocultar")
   }
   
@@ -143,9 +144,10 @@ checkboxSuperior.onclick=()=>{
 
   
   botonTextoIzquierda.onclick=()=>{
-   
+    
       fondoSuperior.classList.add("alinear-texto-izquierda")
       fondoInferior.classList.add("alinear-texto-izquierda")
+      
      }
  
   botonTextoCentro.onclick=()=>{
@@ -191,22 +193,32 @@ inputFondoColor.oninput=()=>{
 
 //  //fondo transparente
 
-//  const inputFondoTransparente = document.getElementById("input-fondo-transparente")
  
- 
-//   inputFondoTransparente.onclick=()=>{
-//   if(inputFondoTransparente.checked){
-//     fondoSuperior.classList.add("ocultar")
-//     fondoInferior.classList.add("ocultar")
-    
-//   }
-//   else{
-//     fondoSuperior.classList.remover("ocultar")
-//     fondoInferior.classList.remove("ocultar")
-//   }
 
  
-// }
+  inputFondoTransparente.onclick=()=>{
+    if(inputFondoTransparente.checked){
+      fondoSuperior.classList.add("transparente-contenedor-central")
+      textoSuperior.classList.add("transparente-texto-superior")
+      fondoInferior.classList.add("transparente-contenedor-central")
+      textoInferior.classList.add("transparente-texto-inferior")
+  
+
+    }
+    else{
+      fondoSuperior.classList.remove("transparente-contenedor-central")
+      textoSuperior.classList.remove("transparente-texto-superior")
+      fondoInferior.classList.remove("transparente-contenedor-central")
+      textoInferior.classList.remove("transparente-texto-inferior")
+    
+
+    }
+
+  
+}
+
+
+
 
 //Cambiarcontorno claro-oscuro
 
@@ -263,17 +275,36 @@ inputColorFondoMeme.oninput=()=>{
 //Efecto del fondo
 
 const seleccionarFondoMeme = document.getElementById("seleccionar-fondo-meme")
-const valorImagen= inputImagen.value
-  const valorImagenUrl= "url" + valorImagen 
+
 seleccionarFondoMeme.onchange=()=>{
+console.log(seleccionarFondoMeme.value)
   
-  console.log(valorImagen)
-  console.log(seleccionarFondoMeme.value)
   if(seleccionarFondoMeme.value === "Aclarar"){
-  //  espacioMeme.style.backgroundBlendMode="luminosity"
+   espacioMeme.style.backgroundBlendMode = "lighter"
+
+   }
+    else if(seleccionarFondoMeme.value === "Oscurecer"){
+    espacioMeme.style.backgroundBlendMode = "darken"
+   } 
+   else if(seleccionarFondoMeme.value === "Diferencia"){
+    espacioMeme.style.backgroundBlendMode="difference"
+   }
+   else if(seleccionarFondoMeme.value === "Iluminocidad"){
+    espacioMeme.style.backgroundBlendMode = "luminosity"
+   }
+   else if(seleccionarFondoMeme.value === "Multiplicar"){
+    espacioMeme.style.backgroundBlendMode = "multiply"
+   }
+   else{  espacioMeme.style.backgroundBlendMode = "none"
+
+   }
+        
+   
+
+   
     
 }
-}
+
 
 
 
