@@ -63,10 +63,18 @@ main{
     height: 300px;
     background-color: black;  
     overflow: hidden; 
+    display:flex;
+    align-items: center;
+    justify-content: center;
     
  
 }
 
+img{
+    width: 100%;
+    height: auto;
+
+}
 
 .boton-descargar-meme{
     height: 40px;
@@ -137,7 +145,7 @@ form{
     margin:3px;
 }
 
-.boton-reestablecer-filtros{
+.boton-restablecer-filtros{
     margin: 6px 0px 0px 20px;   
     width: 150px;
     height: 40px;
@@ -146,7 +154,7 @@ form{
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.boton-reestablecer-filtros:hover{
+.boton-restablecer-filtros:hover{
     background-color:#946825;
     color:wheat;
  }
@@ -213,9 +221,7 @@ textarea{
 .ocultar{
     display: none;   
 }
-.mostrar{
-    display: flex;
-}
+
 .header-claro{
     background-color: #c9a974;
     color:black;
@@ -227,10 +233,7 @@ textarea{
     border: solid ;
 
 }
-.botones-claro:hover{
-    color:rgb(63, 61, 61);
-    background-color:#c9a974;
-}
+
 
 .main-claro{
     background-color:#eee2b4;
@@ -259,13 +262,14 @@ textarea{
 }
 
 .contorno-claro{
-    text-shadow: 1px 1px 2px  white ;
+    text-shadow: 2px 2px 2px  white ;
 }
 .contorno-oscuro{
-    text-shadow: 1px 1px 2px  black ;
+    text-shadow: 2px 2px 2px  black ;
 
 }
 .sin-contorno{
     text-shadow: none;
+  
     
 }

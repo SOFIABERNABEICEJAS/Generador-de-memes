@@ -1,22 +1,27 @@
 
-let botonImagen =document.getElementById("boton-imagen")
-let seccionImagen=document.getElementById("formulario-imagen")
-let botonTexto = document.getElementById("boton-texto")
-let seccionTexto=document.getElementById("formulario-texto")
-let botonCerrarTexto= document.getElementById("boton-cerrar-texto")
-let botonCerrarImagen = document.getElementById("boton-cerrar-imagen")
-let fondoSuperior =document.getElementById("fondo-superior")
-let fondoInferior = document.getElementById("fondo-inferior")
-let inputFondoColor = document.getElementById("input-fondo-color")
-let checkboxSuperior = document.getElementById("checkbox-superior") 
-let checkboxInferior=document.getElementById("checkbox-inferior")
-let textoSuperior= document.getElementById("texto-superior")
-let inputTextoSuperior = document.getElementById("input-texto-superior")
-let textoInferior= document.getElementById("texto-inferior")
-let inputTextoInferior=document.getElementById("input-texto-inferior")
-let inputTextoColor = document.getElementById("input-texto-color")
-let inputTamañoDeLetra = document.getElementById("input-tamaño-de-letra")
-let selectEstiloLetra = document.getElementById("select-estilo-letra")
+const botonImagen =document.getElementById("boton-imagen")
+const seccionImagen=document.getElementById("formulario-imagen")
+const botonTexto = document.getElementById("boton-texto")
+const seccionTexto=document.getElementById("formulario-texto")
+const botonCerrarTexto= document.getElementById("boton-cerrar-texto")
+const botonCerrarImagen = document.getElementById("boton-cerrar-imagen")
+const botonModoOscuro= document.getElementById("boton-modo-oscuro")
+const botonModoClaro=document.getElementById("boton-modo-claro")
+const modoClaro=document.getElementById("modo-claro")
+const mainClaro=document.getElementById("main-claro")
+const botonDescargarMeme=document.getElementById("boton-descargar-meme")
+const fondoSuperior =document.getElementById("fondo-superior")
+const fondoInferior = document.getElementById("fondo-inferior")
+const inputFondoColor = document.getElementById("input-fondo-color")
+const checkboxSuperior = document.getElementById("checkbox-superior") 
+const checkboxInferior= document.getElementById("checkbox-inferior")
+const textoSuperior= document.getElementById("texto-superior")
+const inputTextoSuperior = document.getElementById("input-texto-superior")
+const textoInferior= document.getElementById("texto-inferior")
+const inputTextoInferior=document.getElementById("input-texto-inferior")
+const inputTextoColor = document.getElementById("input-texto-color")
+const inputTamañoDeLetra = document.getElementById("input-tamaño-de-letra")
+const selectEstiloLetra = document.getElementById("select-estilo-letra")
 const botonContornoClaro = document.getElementById("boton-contorno-claro")
 const botonContornoOscuro = document.getElementById("boton-contorno-oscuro")
 const botonSinContorno = document.getElementById("boton-sin-contorno")
@@ -24,44 +29,53 @@ const selectInterlineado = document.getElementById("select-interlineado")
 const inputTamañoEspaciado= document.getElementById("input-tamaño-espaciado")
 const inputColorFondoMeme = document.getElementById("input-color-fondo-meme")
 const espacioMeme = document.getElementById("fondo-espacio-meme")
+     const contenedorCentral = document.getElementById("contenedor-central")
+const botonTextoIzquierda=document.getElementById("boton-texto-izquierda")
+const botonTextoCentro=document.getElementById("boton-texto-centro")
+const botonTextoDerecha=document.getElementById("boton-texto-derecha")
+const inputImagen = document.getElementById("input-imagen")
+const espacioImagen = document.getElementById("espacio-imagen")
+const inputBrillo = document.getElementById("input-brillo")
+const inputOpacidad= document.getElementById("input-opacidad")
+const inputContraste= document.getElementById("input-contraste")
+const inputDesenfoque=document.getElementById("input-desenfoque")
+const inputEscalaGrises=document.getElementById("input-escala-grises")
+const inputSepia=document.getElementById("input-sepia")
+const inputHue=document.getElementById("input-hue")
+const inputSaturado=document.getElementById("input-saturado")
+const inputNegativo=document.getElementById("input-negativo")
+const botonRestablecerFiltros = document.getElementById("boton-restablecer-filtros")
 
 
 
 
-//boton imagen aparecer-desaparecer 
+//Boton imagen aparecer-desaparecer 
 botonImagen.onclick=()=>{    
 seccionImagen.style.display="flex"
 seccionTexto.style.display="none"
 }
 
-//boton cerrar imagen
+//Boton cerrar imagen
 
 botonCerrarImagen.onclick=()=>{
  seccionImagen.style.display="none"
 
 }
 
-// boton texto abrir-cerrar
+//Boton texto abrir-cerrar
 
 botonTexto.onclick=()=>{
  seccionTexto.style.display="flex"
  seccionImagen.style.display="none"
 }
 
-//boton cerrar texto
+//Boton cerrar texto
 
 botonCerrarTexto.onclick=()=>{
   seccionTexto.style.display="none" 
 }
 
-//boton modo oscuro, boton modo claro
-
-let botonModoOscuro= document.getElementById("boton-modo-oscuro")
-let botonModoClaro=document.getElementById("boton-modo-claro")
-let modoClaro=document.getElementById("modo-claro")
-let mainClaro=document.getElementById("main-claro")
-let botonDescargarMeme=document.getElementById("boton-descargar-meme")
-let botonClaro=document.getElementById("boton-claro")
+//Boton modo oscuro, boton modo claro
 
 botonModoOscuro.onclick=()=>{
   if(botonModoClaro.style.display="block"){
@@ -75,7 +89,7 @@ botonModoOscuro.onclick=()=>{
      botonModoOscuro.classList.remove("botones-claro")
      botonModoClaro.classList.remove("botones-claro")
      botonDescargarMeme.classList.remove("botones-claro")
-     botonClaro.classList.remove("seccion-claro")
+     botonRestablecerFiltros.classList.remove("seccion-claro")
   }
   
 }
@@ -92,49 +106,41 @@ botonModoClaro.onclick=()=>{
      botonModoOscuro.classList.add("botones-claro")
      botonModoClaro.classList.add("botones-claro")
      botonDescargarMeme.classList.add("botones-claro")
-     botonClaro.classList.add("seccion-claro")
+    
+   botonRestablecerFiltros.classList.add("seccion-claro")
   }
   
 }
  
-//escribir valor en texto superior
+//Escribir valor en texto superior
 
 inputTextoSuperior.oninput=()=>{
  textoSuperior.textContent=inputTextoSuperior.value
 }
 
-// escrbir  valor en texto inferior
+//Escrbir  valor en texto inferior
 
 inputTextoInferior.oninput=()=>{
   textoInferior.textContent=inputTextoInferior.value
 }
 
 
-//ocultar texto superior
+//Ocultar texto superior
 
 
 checkboxSuperior.onclick=()=>{
-    if(checkboxSuperior.checked){
-      fondoSuperior.classList.add("ocultar")
-    }
-    else{
-      fondoSuperior.classList.remover("ocultar")
-    }
-
+  fondoSuperior.classList.toggle("ocultar")
   }
   
- //ocultar texto inferior 
+ //Ocultar texto inferior 
 
  checkboxInferior.onclick=()=>{
    fondoInferior.classList.toggle("ocultar")
   
 }
   
-//botones para alinear texto izquierda, central, derecha
+//Botones para alinear texto izquierda-central-derecha
 
-  let botonTextoIzquierda=document.getElementById("boton-texto-izquierda")
-  let botonTextoCentro=document.getElementById("boton-texto-centro")
-  let botonTextoDerecha=document.getElementById("boton-texto-derecha")
   
   botonTextoIzquierda.onclick=()=>{
    
@@ -153,14 +159,14 @@ checkboxSuperior.onclick=()=>{
    }
 
 
-//cambiar color texto
+//Cambiar color texto
 
 inputTextoColor.oninput=()=>{
   textoSuperior.style.color=inputTextoColor.value
   textoInferior.style.color=inputTextoColor.value
 }
 
-//cambiar color fondo
+//Cambiar color fondo
 
 inputFondoColor.oninput=()=>{
   fondoSuperior.style.backgroundColor=inputFondoColor.value
@@ -168,14 +174,14 @@ inputFondoColor.oninput=()=>{
 }
 
 
-//cambiar estilo de letra
+//Cambiar estilo de letra
 
   selectEstiloLetra.addEventListener("change", () =>{
     textoSuperior.style.fontFamily = selectEstiloLetra.value;
     textoInferior.style.fontFamily = selectEstiloLetra.value;
   })
 
-//cambiar tamaño de letra    
+//Cambiar tamaño de letra    
     
     inputTamañoDeLetra.addEventListener("input", () =>{
      textoSuperior.style.fontSize =inputTamañoDeLetra.value + "px"
@@ -183,24 +189,24 @@ inputFondoColor.oninput=()=>{
     })
 
 
- //fondo transparente
+//  //fondo transparente
 
- const inputFondoTransparente = document.getElementById("input-fondo-transparente")
+//  const inputFondoTransparente = document.getElementById("input-fondo-transparente")
  
  
-  inputFondoTransparente.onclick=()=>{
-  if(inputFondoTransparente.checked){
-    fondoSuperior.classList.add("ocultar")
-    fondoInferior.classList.add("ocultar")
+//   inputFondoTransparente.onclick=()=>{
+//   if(inputFondoTransparente.checked){
+//     fondoSuperior.classList.add("ocultar")
+//     fondoInferior.classList.add("ocultar")
     
-  }
-  else{
-    fondoSuperior.classList.remover("ocultar")
-    fondoInferior.classList.remove("ocultar")
-  }
+//   }
+//   else{
+//     fondoSuperior.classList.remover("ocultar")
+//     fondoInferior.classList.remove("ocultar")
+//   }
 
  
-}
+// }
 
 //Cambiarcontorno claro-oscuro
 
@@ -220,7 +226,7 @@ botonSinContorno.onclick=()=>{
 }
 
 
-//cambiar tamaño del fondo superior-inferior
+//Cambiar tamaño del fondo superior-inferior
 
 
 inputTamañoEspaciado.addEventListener("change", ()=>{
@@ -229,8 +235,7 @@ inputTamañoEspaciado.addEventListener("change", ()=>{
 })
 
 
-//interlineado
-
+//Interlineado
 
 
 selectInterlineado.oninput =()=>{
@@ -242,34 +247,38 @@ selectInterlineado.oninput =()=>{
 
 //IMAGEN
 
-const inputImagen = document.getElementById("input-imagen")
-const espacioImagen = document.getElementById("espacio-imagen")
-
+//Insertar una imagen
 
 inputImagen.oninput=()=>{
 
   espacioImagen.src = inputImagen.value
 }
 
-//color del fondo
+//Color del fondo
 
 inputColorFondoMeme.oninput=()=>{
   espacioMeme.style.backgroundColor= inputColorFondoMeme.value
 }
 
-/////////NO ANDA MALDITA SEA////////
+//Efecto del fondo
+
+const seleccionarFondoMeme = document.getElementById("seleccionar-fondo-meme")
+const valorImagen= inputImagen.value
+  const valorImagenUrl= "url" + valorImagen 
+seleccionarFondoMeme.onchange=()=>{
+  
+  console.log(valorImagen)
+  console.log(seleccionarFondoMeme.value)
+  if(seleccionarFondoMeme.value === "Aclarar"){
+  //  espacioMeme.style.backgroundBlendMode="luminosity"
+    
+}
+}
+
+
+
 
 //filtros
-const inputBrillo = document.getElementById("input-brillo")
-const inputOpacidad= document.getElementById("input-opacidad")
-const inputContraste= document.getElementById("input-contraste")
-const inputDesenfoque=document.getElementById("input-desenfoque")
-const inputEscalaGrises=document.getElementById("input-escala-grises")
-const inputSepia=document.getElementById("input-sepia")
-const inputHue=document.getElementById("input-hue")
-const inputSaturado=document.getElementById("input-saturado")
-const inputNegativo=document.getElementById("input-negativo")
-
 
 const cambiarFiltros=()=>{
 
@@ -288,35 +297,20 @@ inputSaturado.addEventListener("change", cambiarFiltros)
 inputNegativo.addEventListener("change", cambiarFiltros)
 
 
-//restablecer filtros
+//RESTABLECER FILTROS//
 
-const botonRestablecerFiltros = document.getElementById("boton-restablecer-filtros");
-const restablecerFiltros = () =>{
-    brillo.value = 1 
-    opacidad.value =1 
-    contraste.value = 100
-    desenfoque.value = 0
-     grises.value = 0
-     sepia.value = 0
-    hue.value = 0
-    saturado.value = 100
-     negativo.value = 0
-     
+ 
+
+botonRestablecerFiltros.onclick=()=>{
+  espacioMeme.style.filter="none"
 
 }
 
-botonReestablecerFiltros.addEventListener("click", () =>{
-    espacioMeme.style.filter = "none";
-    restablecerFiltros();
-});
-
-const formularioImagen=document.getElementById("formulario-imagen")
-const formularioTexto=document.getElementById("formulario-texto")
+//DESCARGAR MEME//
 
 
-formularioImagen.onsubmite=(event)=>{
-  event.preventDefault()
-}
-formularioTexto.onsubmite=(event)=>{
-  event.preventDefault()
-}
+botonDescargarMeme.onclick = () => {
+  domtoimage.toBlob(contenedorCentral).then(function (blob) {
+    window.saveAs(blob, "meme.png");
+  });
+};

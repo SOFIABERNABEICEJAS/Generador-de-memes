@@ -21,11 +21,11 @@
     <header id="modo-claro">
         <h1> GENERADOR DE MEMES</h1>
         <div class="botones-header">
-            <button id="boton-imagen" class="estilos-botones-header"><i class="fa fa-photo"></i> Imagen</button>
-            <button id="boton-texto" class="estilos-botones-header"><i class="fa fa-font"></i> Texto</button>
-            <button id="boton-modo-oscuro" class="estilos-botones-header ocultar"><i class="fa fa-moon-o"></i> Modo
+            <button id="boton-imagen" type="button" class="estilos-botones-header"><i class="fa fa-photo"></i> Imagen</button>
+            <button id="boton-texto" type="button"class="estilos-botones-header"><i class="fa fa-font"></i> Texto</button>
+            <button id="boton-modo-oscuro"type="button" class="estilos-botones-header ocultar"><i class="fa fa-moon-o"></i> Modo
                 Oscuro</button>
-            <button id="boton-modo-claro" class="estilos-botones-header "><i class="fa fa-sun-o"></i> Modo
+            <button id="boton-modo-claro" type="button" class="estilos-botones-header "><i class="fa fa-sun-o"></i> Modo
                 Claro</button>
 
         </div>
@@ -33,14 +33,17 @@
     </header>
     <main id="main-claro">
 
-        <div class="contenedor-central">
+        <div id="contenedor-central"class="contenedor-central">
             <div id="fondo-superior" class="texto-superior-inferior fijar-superior">
                 <h2 id="texto-superior">TOP TEXT</h2>
 
             </div>
 
 
-            <div  id="fondo-espacio-meme" class="espacio-de-meme">
+            <div  id="fondo-espacio-meme"  class="espacio-de-meme">
+
+
+                
                 <img id="espacio-imagen" src="" alt="imagen del meme" aria-label="imagen del meme">
             </div>
 
@@ -54,7 +57,7 @@
         </div>
 
         <div>
-            <button id="boton-descargar-meme" class="boton-descargar-meme">Descargar meme</button>
+            <button type="button" id="boton-descargar-meme" type="button" class="boton-descargar-meme">Descargar meme</button>
         </div>
 
 
@@ -66,7 +69,7 @@
 
     <section id="formulario-imagen" class="formulario-imagen-derecha">
         <div class="contenedor-cerrar">
-            <button id="boton-cerrar-imagen" class="boton-cerrar-formulario"><i class="fa fa-close"></i></button>
+            <button type="button" id="boton-cerrar-imagen" class="boton-cerrar-formulario"><i class="fa fa-close"></i></button>
 
         </div>
         <h3>IMAGEN</h3>
@@ -82,7 +85,7 @@
 
                 </div>
                 <div class="contenedor-chico-fondo-color">
-                    <select class="tamaño-fondo-color" name="opciones">
+                    <select id="seleccionar-fondo-meme" class="tamaño-fondo-color" name="opciones">
                         <option value="" selected>Ninguno</option>
                         <option value="Aclarar">Aclarar</option>
                         <option value="Oscurecer">Oscurecer</option>
@@ -130,7 +133,7 @@
 
 
             </legend>
-            <button id="boton-restablecer-filtros" class="boton-reestablecer-filtros ">RESTABLECER FILTROS</button>
+            <button id="boton-restablecer-filtros" type="button"  class="boton-restablecer-filtros ">RESTABLECER FILTROS</button>
 
 
 
@@ -146,7 +149,7 @@
 
     <section id="formulario-texto" class="formulario-texto-derecha">
         <div class="contenedor-cerrar">
-            <button id="boton-cerrar-texto" class="boton-cerrar-formulario"><i class="fa fa-close"></i></button>
+            <button type="button" id="boton-cerrar-texto" class="boton-cerrar-formulario"><i class="fa fa-close"></i></button>
 
         </div>
 
@@ -189,9 +192,9 @@
                 <input id="input-tamaño-de-letra"class="tamaño-type-number" type="number" name="tamaño de letra" min="16" max="40"
                         aria-label="tamaño de letra">
                 </label>
-                <button id="boton-texto-izquierda"><i class="fa fa-align-left"></i></button>
-                <button id="boton-texto-centro"><i class="fa fa-align-center"></i></button>
-                <button id="boton-texto-derecha"> <i class="fa fa-align-right"></i></button>
+                <button type="button" id="boton-texto-izquierda"><i class="fa fa-align-left"></i></button>
+                <button type="button" id="boton-texto-centro"><i class="fa fa-align-center"></i></button>
+                <button type="button" id="boton-texto-derecha"> <i class="fa fa-align-right"></i></button>
 
             </div>
             <div class="contenedor-fondo-color">
@@ -216,9 +219,9 @@
             </label>
             <label class="label-tamaño"> CONTORNO</label>
             <div>
-                <button id="boton-sin-contorno" class="botones-contorno">Ninguno</button>
-                <button id="boton-contorno-claro" class="botones-contorno">Claro</button>
-                <button id="boton-contorno-oscuro" class="botones-contorno">Oscuro</button>
+                <button type="button" id="boton-sin-contorno" class="botones-contorno">Ninguno</button>
+                <button type="button" id="boton-contorno-claro" class="botones-contorno">Claro</button>
+                <button type="button" id="boton-contorno-oscuro" class="botones-contorno">Oscuro</button>
             </div>
 
 
