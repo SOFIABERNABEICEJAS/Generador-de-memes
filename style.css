@@ -1,7 +1,5 @@
 html, body{
     margin: 0%; 
-}
-body{
     background-color:#a67c42
 }
 
@@ -38,8 +36,9 @@ header{
     color:wheat;
 }
 
+/* ESTILOS DE MAIN */
+
 main {
-    /* height: 110vh; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,10 +48,7 @@ main {
 .contenedor-central{
     margin-top: 15px; 
     display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    
-   
+    flex-direction: column;  
     
 }
 .texto-superior {
@@ -84,6 +80,7 @@ main {
  
 }
 
+/* BOTONES DE MAIN */
 
 .boton-descargar-meme{
     margin: 15px;
@@ -104,7 +101,7 @@ main {
 
 
 
-/* seccion formulario imagen */
+/* SECCION FORMULARIO IMAGEN */
 
 
 .formulario-imagen-derecha{
@@ -158,6 +155,7 @@ form{
     width: 200px;
     margin:4px;
 }
+/* BOTONES FORMULARIO IMAGEN  */
 
 .boton-restablecer-filtros{
     margin: 6px 0px 0px 20px;   
@@ -172,6 +170,8 @@ form{
     background-color:#946825;
     color:wheat;
  }
+
+ /* BOTON CERRAR FORMULARIO  */
 
  .contenedor-cerrar{
      width: 200px;
@@ -188,7 +188,7 @@ form{
 
 
 
-/* seccion formulario texto */
+/* SECCION FORMULARIO TEXTO */
 
 
 .formulario-texto-derecha{
@@ -234,13 +234,13 @@ textarea{
 
 
 
-/* estilos js */
+/* ESTILOS JS */
 
 .ocultar{
     display: none;   
 }
 
-/* estilos modo claro */
+/* ESTILOS MODO CLARO*/
 
 .header-claro{
     background-color: #c9a974;
@@ -260,7 +260,6 @@ textarea{
 
 }
 
-
 .main-claro{
     background-color:#eee2b4;
     color:black
@@ -277,7 +276,7 @@ textarea{
     color:black
 }
 
-/* cambio de alineacion */
+/* CAMBIO DE ALINEACION */
 
 
 .alinear-texto-izquierda{
@@ -294,7 +293,7 @@ textarea{
        
 }
 
- /* estilo de contorno */
+ /* ESTILO DE CONTORNO */
 
 .contorno-claro{
     text-shadow: 2px 2px 2px  white ;
@@ -308,7 +307,7 @@ textarea{
    
 }
 
-/* fondo transparende */
+/* FONDO TRANSPARENTE*/
 
 .transparente-contenedor-central{
     position: relative;
@@ -328,11 +327,7 @@ textarea{
 
 
 
-
-
-
-
-/* responsive */
+/* MEDIA QUERIS */
 
 @media screen and (max-width:950px){
 
@@ -349,9 +344,6 @@ textarea{
     position: static;
 }
  }
-
-
-
 
 
 @media screen and (max-width:500px){
@@ -381,7 +373,7 @@ textarea{
        flex-direction: column;
    }
    header h1{
-       font-size:18px;
+       font-size:20px;
    }
 } 
 @media screen and (max-width:350px){
