@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -16,16 +16,20 @@
     <title>Editor de memes</title>
 </head>
 
-<body>
+<body id="body">
 
     <header id="modo-claro">
         <h1> GENERADOR DE MEMES</h1>
         <div class="botones-header">
-            <button id="boton-imagen" type="button" class="estilos-botones-header" aria-label="boton para abrir seccion imagen" ><i class="fa fa-photo"></i> Imagen</button>
-            <button id="boton-texto" type="button"class="estilos-botones-header" aria-label="boton para abrir seccion texto" ><i class="fa fa-font"></i> Texto</button>
-            <button id="boton-modo-oscuro"type="button" class="estilos-botones-header ocultar" aria-label="boton para cambiar modo escuro y modo claro" ><i class="fa fa-moon-o"></i> Modo
+            <button id="boton-imagen" type="button" class="estilos-botones-header"
+                aria-label="boton para abrir seccion imagen"><i class="fa fa-photo"></i> Imagen</button>
+            <button id="boton-texto" type="button" class="estilos-botones-header"
+                aria-label="boton para abrir seccion texto"><i class="fa fa-font"></i> Texto</button>
+            <button id="boton-modo-oscuro" type="button" class="estilos-botones-header ocultar"
+                aria-label="boton para cambiar modo escuro y modo claro"><i class="fa fa-moon-o"></i> Modo
                 Oscuro</button>
-            <button id="boton-modo-claro" type="button" class="estilos-botones-header " aria-label="boton para cambiar modo escuro y modo claro"><i class="fa fa-sun-o"></i> Modo
+            <button id="boton-modo-claro" type="button" class="estilos-botones-header "
+                aria-label="boton para cambiar modo escuro y modo claro"><i class="fa fa-sun-o"></i> Modo
                 Claro</button>
 
         </div>
@@ -34,212 +38,231 @@
     <main id="main-claro">
 
         <section id="contenedor-central" class="contenedor-central">
-         
-                <div id="fondo-superior" class="texto-superior">
-                    <h2 id="texto-superior">TOP TEXT</h2>
-                </div>
 
-                <div  id="fondo-espacio-meme"  class="espacio-de-meme">
+            <div id="fondo-superior" class="texto-superior">
+                <h2 id="texto-superior">TOP TEXT</h2>
+            </div>
 
-                    
-                
-                  <img id="espacio-imagen" src="" alt="imagen del meme" aria-label="imagen del meme">
-                </div>
-                
-               <div id="fondo-inferior" class="texto-inferior ">
-                   <h2 id="texto-inferior"> BOTTOM TEXT</h2>
-                </div>
-          
+            <div id="fondo-espacio-meme" class="espacio-de-meme">
+
+
+
+                <img id="espacio-imagen" src="" alt="imagen del meme" aria-label="imagen del meme">
+            </div>
+
+            <div id="fondo-inferior" class="texto-inferior ">
+                <h2 id="texto-inferior"> BOTTOM TEXT</h2>
+            </div>
+
         </section>
 
-        <div>
-            <button type="button" id="boton-descargar-meme" type="button" class="boton-descargar-meme" aria-label="boton para descargar meme" >Descargar meme</button>
+        <div class="contenedor-descargar-meme">
+            <button type="button" id="boton-descargar-meme" type="button" class="boton-descargar-meme"
+                aria-label="boton para descargar meme">Descargar meme</button>
         </div>
 
 
+        <!-- Fin del main, comienzo de seccion formulario Imagen -->
+
+        <section id="formulario-imagen" class="formulario-imagen-derecha">
+            <div class="contenedor-cerrar">
+                <button type="button" id="boton-cerrar-imagen" class="boton-cerrar-formulario"
+                    aria-label="boton para cerrar secccion imagen"><i class="fa fa-close"></i></button>
+
+            </div>
+            <h3>IMAGEN</h3>
+            <form id="formulario-imagen">
+                <label class="estilo-formulario label-tamaño"> URL:
+                    <input id="input-imagen" type="url" name="imagen personal" />
+                </label>
+                <div class="contenedor-fondo-color">
+                    <div class="contenedor-chico-fondo-color">
+                        <label class="estilo-formulario"> FONDO </label>
+                        <input id="input-color-fondo-meme" class="tamaño-fondo-color" type="color"
+                            name="color del fondo" aria-label="color del fondo">
+
+
+                    </div>
+                    <div class="contenedor-chico-fondo-color">
+                        <select id="seleccionar-fondo-meme" aria-label="seleccionar estilo de fondo"
+                            class="tamaño-fondo-color" name="opciones">
+                            <option value="" selected>Ninguno</option>
+                            <option value="Aclarar">Aclarar</option>
+                            <option value="Oscurecer">Oscurecer</option>
+                            <option value="Diferencia">Diferencia</option>
+                            <option value="Iluminocidad">Iluminocidad</option>
+                            <option value="Multiplicar">Multiplicar</option>
+                        </select>
+
+                    </div>
+
+                </div>
+                <div class="range-imagen" aria-label="rangos para cambiar la propiedad del meme">
+                    <label class="range-imagen">Brillo
+                        <input id="input-brillo" name="brillo" step="0.1" type="range" min="0" max="1" value="1">
+                    </label>
+                    <label class="range-imagen">Opacidad
+                        <input id="input-opacidad" type="range" name="opacidad" step="0.1" min="0" max="1" value="1">
+                    </label>
+
+                    <label class="range-imagen">Contraste
+                        <input id="input-contraste" type="range" name="contraste" step="0.1" min="100" max="1000"
+                            value="100">
+                    </label>
+
+                    <label class="range-imagen">Desenfoque
+                        <input id="input-desenfoque" type="range" name="desenfoque" step="0.1" min="0" max="10"
+                            value="0">
+                    </label>
+
+                    <label class="range-imagen">Escala de grises
+                        <input id="input-escala-grises" name="escala de grises" type="range" step="0.1" min="0"
+                            max="100" value="0">
+                    </label>
+
+                    <label class="range-imagen">Sepia
+                        <input id="input-sepia" type="range" step="0.1" min="0" max="100" value="0">
+                    </label>
+
+                    <label class="range-imagen">Hue
+                        <input id="input-hue" type="range" name="hue" step="0.1" min="0" max="360" value="0">
+                    </label>
+                    <label class="range-imagen">Saturado
+                        <input id="input-saturado" type="range" name="saturado" step="0.1" min="100" max="1000"
+                            value="100">
+                    </label>
+                    <label class="range-imagen"> Negativo
+                        <input id="input-negativo" type="range" name="negativo" step="0.1" min="0" max="1" value="0">
+                    </label>
+
+
+                </div>
+                <button id="boton-restablecer-filtros" type="button" aria-label="boton restablecer filtros"
+                    class="boton-restablecer-filtros ">RESTABLECER FILTROS</button>
+
+
+
+            </form>
+
+        </section>
+
+
+
+
+        <!-- fin seccion fomulario Imagen, comienzo de formulario Texto  -->
+
+
+        <section id="formulario-texto" class="formulario-texto-derecha">
+            <div class="contenedor-cerrar">
+                <button type="button" id="boton-cerrar-texto" class="boton-cerrar-formulario"
+                    aria-label="boton para cerrar seccion texto"><i class="fa fa-close"></i></button>
+
+            </div>
+
+            <h3>TEXTO</h3>
+            <form id="formulario-texto">
+                <label class="label-tamaño"> TEXTO SUPERIOR</label>
+                <textarea id="input-texto-superior" name="texto superior" cols="15" rows="3">Top Text</textarea>
+
+
+
+                <label class="estilo-superior-inferior">
+                    <input id="checkbox-superior" type="checkbox" name="acepto" value="acepto" /> Sin texto superior
+                </label>
+
+
+                <label class="label-tamaño"> TEXTO INFERIOR </label>
+                <textarea id="input-texto-inferior" name="texto inferiror" cols="15" rows="3">Top Text</textarea>
+
+                <label class="estilo-superior-inferior">
+                    <input id="checkbox-inferior" type="checkbox" name="acepto" value="acepto" /> Sin texto inferior
+                </label>
+
+
+
+
+                <label class="label-tamaño">FUENTES</label>
+                <select id="select-estilo-letra" class="estilo-ancho-margen"
+                    aria-label="selector para cambiar el estilo de letra" name="opciones">
+                    <option value="arieal">Arial</option>
+                    <option value="Arial Black">Arial Black</option>
+                    <option value="American Typewriter">American Typewriter</option>
+                    <option value="Andale Mano">Andale Mano</option>
+                    <option value="Comic Sans MS">Comic Sans MS </option>
+                    <option value="Helvetica">Helvetica</option>
+                    <option value="Impact" selected>Impact</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                </select>
+                <div>
+                    <label class="label-tamaño">
+                        <input id="input-tamaño-de-letra" class="tamaño-type-number" type="number"
+                            name="tamaño de letra" min="16" max="30" aria-label="tamaño de letra">
+                    </label>
+                    <button type="button" id="boton-texto-izquierda" role="img" alt="alineado izquierda"
+                        aria-label="boton para alinear a la izquierda"><i class="fa fa-align-left"></i></button>
+                    <button type="button" id="boton-texto-centro" role="img" alt="alineado central"
+                        aria-label="boton para alinear al centro"><i class="fa fa-align-center"></i></button>
+                    <button type="button" id="boton-texto-derecha" role="img" alt="alineado derecha"
+                        aria-label="boton para alinear a la derecha"> <i class="fa fa-align-right"></i></button>
+
+                </div>
+                <div class="contenedor-fondo-color">
+
+
+                    <div class="contenedor-chico-fondo-color">
+                        <label class="estilo-formulario "> COLOR </label>
+                        <input id="input-texto-color" class="tamaño-fondo-color" name="color del texto" type="color"
+                            aria-label="color del texto">
+                    </div>
+
+                    <div class="contenedor-chico-fondo-color">
+                        <label class="estilo-formulario"> FONDO </label>
+                        <input id="input-fondo-color" class="tamaño-fondo-color" name="color del fondo" type="color"
+                            aria-label="color del fondo">
+                    </div>
+
+                </div>
+
+                <label class="estilo-superior-inferior">
+                    <input id="input-fondo-transparente" type="checkbox" name="acepto" value="acepto" />Fondo
+                    transparente
+                </label>
+                <label class="label-tamaño"> CONTORNO</label>
+                <div>
+                    <button type="button" id="boton-sin-contorno" class="botones-contorno"
+                        aria-label="boton sin contorno en letra">Ninguno</button>
+                    <button type="button" id="boton-contorno-claro" class="botones-contorno"
+                        aria-label="boton contorno claro en letra"> Claro</button>
+                    <button type="button" id="boton-contorno-oscuro" class="botones-contorno"
+                        aria-label="boton contorno oscuro en letra">Oscuro</button>
+                </div>
+
+
+                <label class="label-tamaño"> ESPACIADO</label>
+                <input id="input-tamaño-espaciado" class="estilo-ancho-margen" type="number" name="espaciado" min="20"
+                    max="60" aria-label="espacio entre letras">
+                <label class="label-tamaño">INTERLINEADO</label>
+                <select id="select-interlineado" class="estilo-ancho-margen" aria-label="seleccionar interlineado"
+                    name="opciones">
+                    <option value="0.8">0.8</option>
+                    <option value="1">1</option>
+                    <option value="1.2">1.2</option>
+                    <option value="1.5" selected>1.5</option>
+                    <option value="2">2</option>
+                    <option value="2.5">2.5</option>
+                </select>
+
+            </form>
+            </seccion>
 
 
     </main>
 
-    <!-- Fin del main, comienzo de seccion formulario Imagen -->
-
-    <section id="formulario-imagen" class="formulario-imagen-derecha">
-        <div class="contenedor-cerrar">
-            <button type="button" id="boton-cerrar-imagen" class="boton-cerrar-formulario" aria-label="boton para cerrar secccion imagen" ><i class="fa fa-close"></i></button>
-
-        </div>
-        <h3>IMAGEN</h3>
-        <form id="formulario-imagen">
-            <label class="estilo-formulario label-tamaño"> URL:
-                <input id="input-imagen" type="url" name="imagen personal" />
-            </label>
-            <div class="contenedor-fondo-color">
-                <div class="contenedor-chico-fondo-color">
-                    <label class="estilo-formulario"> FONDO </label>
-                    <input id="input-color-fondo-meme" class="tamaño-fondo-color" type="color" name="color del fondo" aria-label="color del fondo">
-
-
-                </div>
-                <div class="contenedor-chico-fondo-color">
-                    <select id="seleccionar-fondo-meme" aria-label="seleccionar estilo de fondo" class="tamaño-fondo-color" name="opciones">
-                        <option value="" selected>Ninguno</option>
-                        <option value="Aclarar">Aclarar</option>
-                        <option value="Oscurecer">Oscurecer</option>
-                        <option value="Diferencia">Diferencia</option>
-                        <option value="Iluminocidad">Iluminocidad</option>
-                        <option value="Multiplicar">Multiplicar</option>
-                    </select>
-
-                </div>
-
-            </div>
-            <div class="range-imagen" aria-label="rangos para cambiar la propiedad del meme">
-                <label class="range-imagen">Brillo
-                    <input id="input-brillo" name="brillo" step="0.1" type="range" min="0" max="1" value="1">
-                </label>
-                <label class="range-imagen">Opacidad
-                    <input id="input-opacidad"  type="range" name="opacidad" step="0.1" min="0" max="1" value="1">
-                </label>
-
-                <label class="range-imagen">Contraste
-                    <input id="input-contraste"  type="range" name="contraste" step="0.1" min="100" max="1000" value="100">
-                </label>
-
-                <label class="range-imagen">Desenfoque
-                    <input id="input-desenfoque" type="range" name="desenfoque" step="0.1"min="0" max="10" value="0">
-                </label>
-
-                <label class="range-imagen">Escala de grises
-                    <input id="input-escala-grises" name="escala de grises"type="range" step="0.1" min="0" max="100" value="0">
-                </label>
-
-                <label class="range-imagen">Sepia
-                    <input id="input-sepia" type="range" step="0.1" min="0" max="100" value="0">
-                </label>
-
-                <label class="range-imagen">Hue
-                    <input id="input-hue" type="range" name="hue" step="0.1" min="0" max="360" value="0">
-                </label>
-                <label class="range-imagen">Saturado
-                    <input id="input-saturado" type="range" name="saturado" step="0.1" min="100" max="1000" value="100">
-                </label>
-                <label class="range-imagen"> Negativo
-                    <input  id="input-negativo" type="range"  name="negativo" step="0.1" min="0" max="1" value="0">
-                </label>
-
-
-            </div>
-            <button id="boton-restablecer-filtros" type="button" aria-label="boton restablecer filtros" class="boton-restablecer-filtros ">RESTABLECER FILTROS</button>
 
 
 
-        </form>
-
-    </section>
-
-
-
-
-    <!-- fin seccion fomulario Imagen, comienzo de formulario Texto  -->
-
-
-    <section id="formulario-texto" class="formulario-texto-derecha">
-        <div class="contenedor-cerrar">
-            <button type="button" id="boton-cerrar-texto" class="boton-cerrar-formulario" aria-label="boton para cerrar seccion texto"><i class="fa fa-close"></i></button>
-
-        </div>
-
-        <h3>TEXTO</h3>
-        <form id="formulario-texto">
-            <label class="label-tamaño"> TEXTO SUPERIOR</label>
-            <textarea id="input-texto-superior" name="texto superior" cols="15" rows="3">Top Text</textarea>
-
-
-
-            <label class="estilo-superior-inferior">
-                <input id="checkbox-superior" type="checkbox" name="acepto" value="acepto" /> Sin texto superior
-            </label>
-
-
-            <label class="label-tamaño"> TEXTO INFERIOR </label>
-            <textarea id="input-texto-inferior" name="texto inferiror" cols="15" rows="3">Top Text</textarea>
-
-            <label class="estilo-superior-inferior">
-                <input id="checkbox-inferior" type="checkbox" name="acepto" value="acepto" /> Sin texto inferior
-            </label>
-
-
-
-
-            <label class="label-tamaño">FUENTES</label>
-            <select id="select-estilo-letra" class="estilo-ancho-margen" aria-label="selector para cambiar el estilo de letra" name="opciones">
-                <option  value="arieal">Arial</option>
-                <option  value="Arial Black">Arial Black</option>
-                <option  value="American Typewriter">American Typewriter</option>
-                <option  value="Andale Mano">Andale Mano</option>
-                <option  value="Comic Sans MS">Comic Sans MS </option>
-                <option  value="Helvetica">Helvetica</option>
-                <option  value="Impact" selected>Impact</option>
-                <option  value="Verdana">Verdana</option>
-                <option  value="Times New Roman">Times New Roman</option>
-            </select>
-            <div>
-                <label class="label-tamaño">
-                <input id="input-tamaño-de-letra"class="tamaño-type-number" type="number" name="tamaño de letra" min="16" max="30"
-                        aria-label="tamaño de letra">
-                </label>
-                <button type="button" id="boton-texto-izquierda" aria-label="boton para colocar el texto  a la izquierda"><i class="fa fa-align-left"></i></button>
-                <button type="button" id="boton-texto-centro" aria-label="boton para colocar el texto centrado"><i class="fa fa-align-center"></i></button>
-                <button type="button" id="boton-texto-derecha" aria-label="boton para colocar el texto a la derecha"> <i class="fa fa-align-right"></i></button>
-
-            </div>
-            <div class="contenedor-fondo-color">
-
-
-                <div class="contenedor-chico-fondo-color">
-                    <label class="estilo-formulario "> COLOR </label>
-                    <input id="input-texto-color" class="tamaño-fondo-color" name="color del texto" type="color"
-                        aria-label="color del texto">
-                </div>
-
-                <div class="contenedor-chico-fondo-color">
-                    <label class="estilo-formulario"> FONDO </label>
-                    <input id="input-fondo-color" class="tamaño-fondo-color" name="color del fondo" type="color"
-                        aria-label="color del fondo">
-                </div>
-
-            </div>
-
-            <label class="estilo-superior-inferior">
-                <input id="input-fondo-transparente" type="checkbox" name="acepto" value="acepto" />Fondo transparente
-            </label>
-            <label class="label-tamaño"> CONTORNO</label>
-            <div>
-                <button type="button" id="boton-sin-contorno" class="botones-contorno" aria-label="boton sin contorno en letra">Ninguno</button>
-                <button type="button" id="boton-contorno-claro" class="botones-contorno" aria-label="boton contorno claro en letra"> Claro</button>
-                <button type="button" id="boton-contorno-oscuro" class="botones-contorno" aria-label="boton contorno oscuro en letra">Oscuro</button>
-            </div>
-
-
-            <label class="label-tamaño"> ESPACIADO</label>
-            <input id="input-tamaño-espaciado"class="estilo-ancho-margen" type="number" name="espaciado" min="20" max="50"
-                aria-label="espacio entre letras">
-            <label class="label-tamaño">INTERLINEADO</label>
-            <select id="select-interlineado" class="estilo-ancho-margen" aria-label="seleccionar interlineado" name="opciones">
-                <option value="0.8">0.8</option>
-                <option value="1">1</option>
-                <option value="1.2">1.2</option>
-                <option value="1.5" selected>1.5</option>
-                <option value="2">2</option>
-                <option value="2.5">2.5</option>
-            </select>
-
-        </form>
-    </seccion>
-
-
-
-        <script src="index.js"></script>
+    <script src="index.js"></script>
 
 
 </body>
