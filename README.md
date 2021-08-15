@@ -10,6 +10,7 @@ Las tecnologias aprendidas:
 - Maquetado con FLEXBOX
 - JAVASCRIPT
 - RESPONSIVE
+
 Dejo el link del trabajo [link](https://sofiabernabeicejas.github.io/generador-de-memes/)✔
 
 Con mucho esfuerzo y dedicacion. Feliz por cada paso ❤
