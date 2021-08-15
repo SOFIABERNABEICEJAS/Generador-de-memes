@@ -238,8 +238,8 @@ botonSinContorno.onclick=()=>{
 
 
 inputTamañoEspaciado.oninput=()=>{
-  fondoSuperior.style.height = inputTamañoEspaciado.value + "px"
-  fondoInferior.style.height = inputTamañoEspaciado.value + "px"
+  textoSuperior.style.padding = inputTamañoEspaciado.value + "px"
+  textoInferior.style.padding = inputTamañoEspaciado.value + "px"
 }
 
 
