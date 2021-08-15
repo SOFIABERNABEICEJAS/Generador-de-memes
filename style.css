@@ -1,6 +1,6 @@
-html, body{
+ body{
     margin: 0%; 
-    background-color:#a67c42
+    background-color:#a67c42;
 }
 
 header{
@@ -108,7 +108,6 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: 110vh; */
     width: 250px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -195,7 +194,6 @@ form{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* height: 110vh; */
     width: 250px;
     padding-top: 10px;
     padding-bottom: 10px;
@@ -378,14 +376,14 @@ textarea{
 } 
 @media screen and (max-width:350px){
     .texto-superior {
-        width: 180px;
+        width: 200px;
         
        }
        .texto-inferior{
-        width: 180px;
+        width: 200px;
        } 
        .espacio-de-meme{
-           width: 200px;
+           width: 220px;
           
 }
 

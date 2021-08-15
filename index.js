@@ -47,6 +47,7 @@ const inputNegativo=document.getElementById("input-negativo")
 const botonRestablecerFiltros = document.getElementById("boton-restablecer-filtros")
 const inputFondoTransparente = document.getElementById("input-fondo-transparente")
 const body=document.getElementById("body")
+const seleccionarFondoMeme = document.getElementById("seleccionar-fondo-meme")
 
 // BOTON IMAGEN APARECER-DESAPARECER//
 
@@ -120,16 +121,14 @@ inputTextoSuperior.oninput=()=>{
 }
 
 //ESCRIBIR VALOR EN TEXTO INFERIOR//
+
 inputTextoInferior.oninput=()=>{
   textoInferior.textContent=inputTextoInferior.value
 }
 
-
 //OCULTAR TEXTO SUPERIOR//
 
-
-checkboxSuperior.onclick=()=>{
-  
+checkboxSuperior.onclick=()=>{ 
   fondoSuperior.classList.toggle("ocultar")
   }
   
@@ -194,8 +193,6 @@ inputFondoColor.oninput=()=>{
 //FONDO TRANSPARENTE //
 
  
-
- 
   inputFondoTransparente.onclick=()=>{
     if(inputFondoTransparente.checked){
       fondoSuperior.classList.add("transparente-contenedor-central")
@@ -217,8 +214,6 @@ inputFondoColor.oninput=()=>{
 
   
 }
-
-
 
 
 //CAMBIAR CONTORNO CLARO-OSCURO//
@@ -258,7 +253,6 @@ selectInterlineado.oninput =()=>{
 }
 
 
-
 //INSERTAR UNA IMAGEN //
 
 inputImagen.oninput=()=>{
@@ -274,30 +268,33 @@ inputColorFondoMeme.oninput=()=>{
 
 //EFECTO DE FONDO//
 
-const seleccionarFondoMeme = document.getElementById("seleccionar-fondo-meme")
+
+
 
 seleccionarFondoMeme.onchange=()=>{
-console.log(seleccionarFondoMeme.value)
-  
-  if(seleccionarFondoMeme.value === "Aclarar"){
-   espacioMeme.style.backgroundBlendMode = "lighter"
+
+
+   espacioMeme.style.backgroundImage = `url("${inputImagen.value}")`
+
+  if(seleccionarFondoMeme.value === "aclarar"){
+   espacioMeme.style.backgroundBlendMode = "lighten"
 
    }
-    else if(seleccionarFondoMeme.value === "Oscurecer"){
+    else if(seleccionarFondoMeme.value === "oscurecer"){
     espacioMeme.style.backgroundBlendMode = "darken"
    } 
-   else if(seleccionarFondoMeme.value === "Diferencia"){
+   else if(seleccionarFondoMeme.value === "diferencia"){
     espacioMeme.style.backgroundBlendMode="difference"
    }
-   else if(seleccionarFondoMeme.value === "Iluminocidad"){
+   else if(seleccionarFondoMeme.value === "iluminocidad"){
     espacioMeme.style.backgroundBlendMode = "luminosity"
    }
-   else if(seleccionarFondoMeme.value === "Multiplicar"){
+   else if(seleccionarFondoMeme.value === "multiplicar"){
     espacioMeme.style.backgroundBlendMode = "multiply"
    }
    else{  espacioMeme.style.backgroundBlendMode = "none"
 
-   }
+    }
         
     
 }
@@ -338,4 +335,4 @@ botonDescargarMeme.onclick = () => {
   domtoimage.toBlob(contenedorCentral).then(function (blob) {
     window.saveAs(blob, "meme.png");
   });
-};
+}
