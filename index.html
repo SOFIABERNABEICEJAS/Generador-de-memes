@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
     <title>HACE TU PROPIO MEME</title>
 </head>
 
@@ -44,29 +45,34 @@
 
         <!-- SECCION CONTENEDOR CENTRAL -->
 
-        <section id="contenedor-central" class="contenedor-central">
+        <section >
 
-            <div id="fondo-superior" class="texto-superior">
-                <h2 id="texto-superior">TOP TEXT</h2>
+            <div id="contenedor-central" class="contenedor-central">
+
+                <div id="fondo-superior" class="texto-superior">
+                    <h2 id="texto-superior">TOP TEXT</h2>
+                </div>
+
+                <div id="fondo-espacio-meme" class="espacio-de-meme">
+
+                    <img id="espacio-imagen" src="" alt="imagen del meme" aria-label="imagen del meme">
+                </div>
+
+                <div id="fondo-inferior" class="texto-inferior ">
+                    <h2 id="texto-inferior"> BOTTOM TEXT</h2>
+                </div>
+
             </div>
 
-            <div id="fondo-espacio-meme" class="espacio-de-meme">
 
-                <img id="espacio-imagen" src="" alt="imagen del meme" aria-label="imagen del meme">
+
+            <!-- BOTON DESCARGAR MEME  -->
+
+            <div class="contenedor-descargar-meme">
+                <button type="button" id="boton-descargar-meme" type="button" class="boton-descargar-meme"
+                    aria-label="boton para descargar meme">Descargar meme</button>
             </div>
-
-            <div id="fondo-inferior" class="texto-inferior ">
-                <h2 id="texto-inferior"> BOTTOM TEXT</h2>
-            </div>
-
         </section>
-        <!-- BOTON DESCARGAR MEME  -->
-
-        <div class="contenedor-descargar-meme">
-            <button type="button" id="boton-descargar-meme" type="button" class="boton-descargar-meme"
-                aria-label="boton para descargar meme">Descargar meme</button>
-        </div>
-
         <!-- FIN DE SECCION CONTENEDOR CENTRAL -->
         <!-- COMIENZO DE SECCION IMAGEN -->
 

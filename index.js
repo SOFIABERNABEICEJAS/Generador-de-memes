@@ -49,7 +49,7 @@ const inputFondoTransparente = document.getElementById("input-fondo-transparente
 const body=document.getElementById("body")
 const seleccionarFondoMeme = document.getElementById("seleccionar-fondo-meme")
 
-// BOTON IMAGEN APARECER-DESAPARECER//
+// BOTON IMAGEN APARECER//
 
 botonImagen.onclick=()=>{    
 seccionImagen.style.display="flex"
@@ -63,7 +63,7 @@ botonCerrarImagen.onclick=()=>{
 
 }
 
-//BOTON TEXTO ABRIR-CERRAR//
+//BOTON TEXTO ABRIR//
 
 botonTexto.onclick=()=>{
  seccionTexto.style.display="flex"
@@ -332,7 +332,8 @@ botonRestablecerFiltros.onclick=()=>{
 
 
 botonDescargarMeme.onclick = () => {
-  domtoimage.toBlob(contenedorCentral).then(function (blob) {
-    window.saveAs(blob, "meme.png");
+  domtoimage.toBlob(contenedorCentral)
+  .then(function (blob) {
+    window.saveAs(blob, "haceTuPropioMeme.png");
   });
 }

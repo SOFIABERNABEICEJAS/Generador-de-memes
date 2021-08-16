@@ -72,15 +72,26 @@ main {
     justify-content: center;
    
 }
-.espacio-de-meme{
+.espacio-de-meme{ 
     width: 400px;
     height: 360px;
     background-color: black;  
     overflow: hidden; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
  
 }
 
+
 /* BOTONES DE MAIN */
+
+.contenedor-descargar-meme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .boton-descargar-meme{
     margin: 15px;
