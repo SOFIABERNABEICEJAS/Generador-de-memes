@@ -1,4 +1,6 @@
-
+// se mas prolija, se consistente con el espaciado 
+// siempre deja espacios antes y despues del signo = al importar, asi:
+// const botonImagen = document.getElementById("boton-imagen")
 const botonImagen =document.getElementById("boton-imagen")
 const seccionImagen=document.getElementById("formulario-imagen")
 const botonTexto = document.getElementById("boton-texto")
@@ -50,7 +52,14 @@ const body=document.getElementById("body")
 const seleccionarFondoMeme = document.getElementById("seleccionar-fondo-meme")
 
 // BOTON IMAGEN APARECER//
-
+// se mas prolija, deja espacios en la declaracion funcion, entre el igual y los valores, 
+// y atencion al tabulado correspondiente
+// botonImagen.onclick = () => {    
+//   seccionImagen.style.display = "flex"
+//   seccionTexto.style.display = "none"
+// }
+  
+  
 botonImagen.onclick=()=>{    
 seccionImagen.style.display="flex"
 seccionTexto.style.display="none"
@@ -77,7 +86,12 @@ botonCerrarTexto.onclick=()=>{
 }
 
 //BOTON MODO OSCURO MODO CLARO//
-
+// Esta manera de implementar el modo oscuro / claro es correcta, pero creo que no es escalable. 
+// Es decir, a futuro, si tu web crece, se le agregan secciones, etc, va a ser imposible
+// seguir agregando cosas a esta funcion. 
+// Una alternativa mas escalable es la que mencioné en clase: darle una clase al body cuando 
+// se agrega modo-oscuro o modo-claro, y en el CSS darle estilos distintos a los descendientes 
+// Si te genera dudas como hacerlo no dejes de escribirme. 
 botonModoOscuro.onclick=()=>{
   if(botonModoClaro.style.display="block"){
     botonModoOscuro.style.display="none"
@@ -273,7 +287,20 @@ inputColorFondoMeme.oninput=()=>{
 
 seleccionarFondoMeme.onchange=()=>{
 
+// esta funcion podria ser mucho mas breve si aporvecharas tu value
+// primero modificamos los value en HTML
+// <option value="" selected>Ninguno</option>
+// <option value="aclarar">Aclarar</option>
+// <option value="oscurecer">Oscurecer</option>
+// <option value="diferencia">Diferencia</option>
+// <option value="iluminocidad">Iluminocidad</option>
+// <option value="multiplicar">Multiplicar</option>
 
+// luego la funcion puede quedar asi de chiquita:
+// seleccionarFondoMeme.onchange = () => {
+//   espacioMeme.style.backgroundImage = `url("${inputImagen.value}")`
+//   espacioMeme.style.backgroundBlendMode = seleccionarFondoMeme.value
+// }
    espacioMeme.style.backgroundImage = `url("${inputImagen.value}")`
 
   if(seleccionarFondoMeme.value === "aclarar"){
@@ -303,6 +330,13 @@ seleccionarFondoMeme.onchange=()=>{
 //FILTROS//
 
 const cambiarFiltros=()=>{
+// cuando sea tan largo, agrega enter asi el lector puede ver todo
+// espacioMeme.style.filter= `
+//   brightness(${inputBrillo.value}) opacity(${inputOpacidad.value}) 
+//   contrast(${inputContraste.value}%) blur(${inputDesenfoque.value}px) 
+//   grayscale(${inputEscalaGrises.value}%) sepia(${inputSepia.value}%) 
+//   hue-rotate(${inputHue.value}deg) saturate(${inputSaturado.value}%) 
+//   invert(${inputNegativo.value})` ;
 
   espacioMeme.style.filter= ` brightness(${inputBrillo.value}) opacity(${inputOpacidad.value}) contrast(${inputContraste.value}%) blur(${inputDesenfoque.value}px) grayscale(${inputEscalaGrises.value}%) sepia(${inputSepia.value}%) hue-rotate(${inputHue.value}deg) saturate(${inputSaturado.value}%) invert(${inputNegativo.value})` ;
  
@@ -324,6 +358,9 @@ inputNegativo.addEventListener("change", cambiarFiltros)
  
 
 botonRestablecerFiltros.onclick=()=>{
+  // esto restablece los filtros una vez, pero como los inputs siguen teniendo los valores de antes,
+  // apenas toque uno se van a aplicar todos de nuevo
+  // tenes que restablecer los valores de los filtros !
   espacioMeme.style.filter="none"
 
 }

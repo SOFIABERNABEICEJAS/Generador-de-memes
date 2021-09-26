@@ -54,7 +54,7 @@
                 </div>
 
                 <div id="fondo-espacio-meme" class="espacio-de-meme">
-
+                        <!-- no agregues este src aun, para que la imagen no parezca rota apenas carga la web -->
                     <img id="espacio-imagen" src="" alt="imagen del meme" aria-label="imagen del meme">
                 </div>
 
@@ -89,6 +89,7 @@
                 </label>
                 <div class="contenedor-fondo-color">
                     <div class="contenedor-chico-fondo-color">
+                        <!-- el label debe o bien rodear al input, o tener el atributo for con el id del input -->
                         <label class="estilo-formulario"> FONDO </label>
                         <input id="input-color-fondo-meme" class="tamaño-fondo-color" type="color"
                             name="color del fondo" aria-label="color del fondo">
@@ -110,7 +111,9 @@
 
                 </div>
                 <div class="range-imagen" aria-label="rangos para cambiar la propiedad del meme">
+                    <!-- mismo comentario que antes sobre los label -->
                     <label class="range-imagen">Brillo
+                        <!-- no todos los elementos deben tener un step de 0.1, chequea en las consignas -->
                         <input id="input-brillo" name="brillo" step="0.1" type="range" min="0" max="1" value="1">
                     </label>
                     <label class="range-imagen">Opacidad

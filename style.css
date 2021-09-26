@@ -1,6 +1,8 @@
  body{
     margin: 0%; 
     background-color:#a67c42;
+    /* queda feúcha Times New Roman como tipografia por defecto. 
+    Veo que importaste Noto en el HTML: por qué no la usas aca?  */
 }
 
 header{
@@ -10,6 +12,7 @@ header{
     justify-content: center;
     background-color:#855e26;
     color:white; 
+    /* innecesario */
     width: 100%;
 
  }
@@ -70,7 +73,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-   
+   /* atencion a la prolijidad, no dejes saltos de linea de mas, deja enter entre una orden y otra, 
+   deja espacio entre el nombre y la llave */
+
 }
 .espacio-de-meme{ 
     width: 400px;
@@ -137,6 +142,7 @@ main {
     margin: 3px 0px 3px 0px;
 
     }
+    /* ojo con el tabulado aca */
 .label-tamaño{
         margin: 8px 3px 8px 3px;
         width: 200px;
@@ -348,6 +354,7 @@ textarea{
     }
     
 .formulario-texto-derecha{
+    /* esta orden no se aplica porque hay un error, pz en lugar de px */
     width: 240pz;
     margin-top: 10px;
     position: static;
