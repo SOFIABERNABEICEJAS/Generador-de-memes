@@ -11,6 +11,6 @@ Las tecnologias aprendidas:
 - JAVASCRIPT
 - RESPONSIVE
 
-Dejo el link del trabajo [link](https://sofiabernabeicejas.github.io/generador-de-memes/)✔
+Dejo el link del trabajo [link](https://sofiabernabeicejas.github.io/Generador-de-memes/)✔
 
 Con mucho esfuerzo y dedicacion. Feliz por cada paso ❤
