@@ -1,3 +1,5 @@
+![Minion](https://sofiabernabeicejas.github.io/Generador-de-memes/img/generador-de-memes.png)
+
 # EDITOR DE MEMES
 
 ### 😂¡CREA TU PROPIO MEME!😂
@@ -11,6 +13,6 @@ Las tecnologias aprendidas:
 - JAVASCRIPT
 - RESPONSIVE
 
-Dejo el link del trabajo [link](https://sofiabernabeicejas.github.io/Generador-de-memes/)✔
+Dejo el link del trabajo [Editos de MEMES](https://sofiabernabeicejas.github.io/Generador-de-memes/)✔
 
 Con mucho esfuerzo y dedicacion. Feliz por cada paso ❤
